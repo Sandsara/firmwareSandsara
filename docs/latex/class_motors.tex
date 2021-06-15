@@ -1,0 +1,529 @@
+\hypertarget{class_motors}{}\doxysection{Motors Class Reference}
+\label{class_motors}\index{Motors@{Motors}}
+
+
+Se encarga del control de los motores.  
+
+
+
+
+{\ttfamily \#include $<$Motors.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_motors_aef975cec60f33785886ce661226e7cfd}\label{class_motors_aef975cec60f33785886ce661226e7cfd}} 
+\mbox{\hyperlink{class_motors_aef975cec60f33785886ce661226e7cfd}{Motors}} ()
+\begin{DoxyCompactList}\small\item\em It\textquotesingle{}s the class constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_a6ed7ba7979189ca66273497b8c2f6061}{move\+To}} (double x, double y, bool=false)
+\begin{DoxyCompactList}\small\item\em Esta funcion hace que el robot se mueve de su posicion actual hacia una nueva posicion x,y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_a5bf25c15446fa6e01985eb09e9aa4bed}{init}} (double=0, double=0)
+\begin{DoxyCompactList}\small\item\em inicializa el objeto \mbox{\hyperlink{class_motors}{Motors}} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_ad5a040616f1c428a839b1cc03495295d}{get\+Current\+Module}} ()
+\begin{DoxyCompactList}\small\item\em calcula el modulo de la posicion actual de la esfera. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_a152e1ecd35dcda8747b49189582fe245}{get\+Current\+Angle}} ()
+\begin{DoxyCompactList}\small\item\em Calcula el angulo de la posicion actual de la esfera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_aa9b38760ab9d9d35c292fb5f7a670d80}{set\+Z\+Current}} (double)
+\begin{DoxyCompactList}\small\item\em moficica el miembro z\+\_\+current. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_a5c68fb90f82b7274db17d3e39d88eb9f}{set\+Theta\+Current}} (double)
+\begin{DoxyCompactList}\small\item\em moficica el miembro theta\+\_\+current. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_adcee54e76ae3767dd83658beb5d1a912}{set\+Speed}} (int)
+\begin{DoxyCompactList}\small\item\em cambia la velocidad de Sand\+Sara. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_a85230d97cfd7045277f2352f9673f4d7}{get\+Speed}} ()
+\begin{DoxyCompactList}\small\item\em obtiene el valor de la velocidad actual de Sandsara en milimetros por segundo \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_a874ea14d554cbd35187193ebf7fafff1}{get\+Z\+Current}} ()
+\begin{DoxyCompactList}\small\item\em obtiene la variable miembro z\+Current \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_ab54236c39a16cd7537870255548f5511}{get\+Theta\+Current}} ()
+\begin{DoxyCompactList}\small\item\em obtiene la varieble miembro theta\+Current \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_a077cfdc8ac333c2e69519da8a688b8e5}{module}} (double, double, double, double)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia entre 2 puntos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_motors_aa92d3a59c59ac8c1fb2125ea4b745255}{position}} ()
+\begin{DoxyCompactList}\small\item\em devuelve un valor para saber en donde se encuentra la esfera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_motors_ace8460ed799de2e5d8ab5367e72403d2}\label{class_motors_ace8460ed799de2e5d8ab5367e72403d2}} 
+void \mbox{\hyperlink{class_motors_ace8460ed799de2e5d8ab5367e72403d2}{complete\+Path}} ()
+\begin{DoxyCompactList}\small\item\em execute the remaining buffered steps. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_a2b3832775e7f9a8fd2275c3684364ccd}{set\+Real\+Q1}} (double)
+\begin{DoxyCompactList}\small\item\em moficica el miembro real\+Q1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_a6bf6c260d12c399b2dabae207eb01c40}{set\+Real\+Q2}} (double)
+\begin{DoxyCompactList}\small\item\em moficica el miembro real\+Q2. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_abc856656f13dd05e5602084d3d7811d6}{get\+Real\+Q1}} ()
+\begin{DoxyCompactList}\small\item\em moficica el miembro real\+Q1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_motors_a9330d58004c467bd4a9f3f9087a3510f}{get\+Real\+Q2}} ()
+\begin{DoxyCompactList}\small\item\em moficica el miembro real\+Q1. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_motors_ab1fcc82dc339fd54bebb6cfac5046cd6}\label{class_motors_ab1fcc82dc339fd54bebb6cfac5046cd6}} 
+void \mbox{\hyperlink{class_motors_ab1fcc82dc339fd54bebb6cfac5046cd6}{stop\+And\+Reset\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em this function resets some variables and replace the position variables to the real positions of Sandsara. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_ad7b80ae03cff42126cc4a03af368d505}{set\+Real\+Speed1}} (double)
+\begin{DoxyCompactList}\small\item\em moficica el miembro real\+Speed1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motors_a464775b49c7fe31206a8704fe515c456}{set\+Real\+Speed2}} (double)
+\begin{DoxyCompactList}\small\item\em moficica el miembro real\+Speed2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_motors_a7c611b585454635240f9f21a76902424}\label{class_motors_a7c611b585454635240f9f21a76902424}} 
+void \mbox{\hyperlink{class_motors_a7c611b585454635240f9f21a76902424}{reset\+Speeds}} ()
+\begin{DoxyCompactList}\small\item\em Recalcula las velocidades de los puntos guardados para movimientos futuros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_motors_a5d4e72cba3141c3c5622651206cf0557}{rotate}} (double \&, double \&, double)
+\begin{DoxyCompactList}\small\item\em rota la posicion x,y con centro en 0,0 tantos grados como se desee. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_motors_af18e91b114aa953b0f23d6d797706cc7}{z\+Polar}} (double, double)
+\begin{DoxyCompactList}\small\item\em calcula el valor del modulo del punto en coordenadas polares \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_motors_a6760021c3006e83ddaa031dbe811dcbc}{theta\+Polar}} (double, double)
+\begin{DoxyCompactList}\small\item\em calcula el angulo que se forma con la horizontal, de un punto x,y. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_motors_a3b835e5006b1bdd46bcba51e0c936f77}{normalize\+Angle}} (double)
+\begin{DoxyCompactList}\small\item\em normaliza un angulo para estar en el rango de \mbox{[}0,2$\ast$\+PI). \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{class_motors_a4459e53ea71a60a5c00d8ddb5741e61a}{arc\+Length}} (double, double, double)
+\begin{DoxyCompactList}\small\item\em calcula la longitud de arco que se forma al girar de un punto A a un punto B en coordenadas polares. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_motors_a50b7bca991cd256f66e12d99a2578c14}\label{class_motors_a50b7bca991cd256f66e12d99a2578c14}} 
+Accel\+Stepper {\bfseries stepper1}
+\item 
+\mbox{\Hypertarget{class_motors_ab35eada9bc335380c7d83b4acf7d832a}\label{class_motors_ab35eada9bc335380c7d83b4acf7d832a}} 
+Accel\+Stepper {\bfseries stepper2}
+\item 
+\mbox{\Hypertarget{class_motors_a23774702cd8241ca229674a4935f8a7e}\label{class_motors_a23774702cd8241ca229674a4935f8a7e}} 
+Multi\+Stepper {\bfseries steppers}
+\item 
+\mbox{\Hypertarget{class_motors_a8d3dc3c18bb6ac3f73fada783ff81b08}\label{class_motors_a8d3dc3c18bb6ac3f73fada783ff81b08}} 
+int {\bfseries microstepping}
+\item 
+\mbox{\Hypertarget{class_motors_a0b6d627a75006ddbdea04e7d199d55fe}\label{class_motors_a0b6d627a75006ddbdea04e7d199d55fe}} 
+double {\bfseries degrees\+\_\+per\+\_\+step}
+\item 
+\mbox{\Hypertarget{class_motors_a2cede926703e2a524aff84a2906c1655}\label{class_motors_a2cede926703e2a524aff84a2906c1655}} 
+double {\bfseries coupling\+Angle}
+\item 
+\mbox{\Hypertarget{class_motors_a0e8af70fff0d8279cb66cc30d6131aab}\label{class_motors_a0e8af70fff0d8279cb66cc30d6131aab}} 
+double {\bfseries x\+\_\+current}
+\item 
+\mbox{\Hypertarget{class_motors_aeaa05c18878fecd8c8337f2595a13c67}\label{class_motors_aeaa05c18878fecd8c8337f2595a13c67}} 
+double {\bfseries y\+\_\+current}
+\item 
+\mbox{\Hypertarget{class_motors_a40af256194f400ed5db9cbc9fd521cdf}\label{class_motors_a40af256194f400ed5db9cbc9fd521cdf}} 
+double {\bfseries q1\+\_\+current}
+\item 
+\mbox{\Hypertarget{class_motors_aa3df34c19ba3eb3dfba23d4478400d54}\label{class_motors_aa3df34c19ba3eb3dfba23d4478400d54}} 
+double {\bfseries q2\+\_\+current}
+\item 
+\mbox{\Hypertarget{class_motors_a8bd2709fce43b90ee9e9003e92fa2b23}\label{class_motors_a8bd2709fce43b90ee9e9003e92fa2b23}} 
+double {\bfseries millimeter\+Speed} = 15
+\item 
+\mbox{\Hypertarget{class_motors_a91aa715064e4e77e91576ecc7b551eff}\label{class_motors_a91aa715064e4e77e91576ecc7b551eff}} 
+double {\bfseries \+\_\+path\+Speed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Se encarga del control de los motores. 
+
+Esta clase se encarga de calcular los pasos necesarios para llegar a una determinada posicion. En esta clase tambien se encuentran todas las matematicas con respecto a la cinematica y cinematica inversa de Sandsara. 
+\begin{DoxyParams}{Parameters}
+{\em microstepping} & almacena el valor de microstepping del motor \\
+\hline
+{\em x\+\_\+current} & alamacena la coordenada x de la posicion actual de Sandsara (en milimetros). \\
+\hline
+{\em y\+\_\+current} & alamacena la coordenada y de la posicion actual de Sandsara (en milimetros). \\
+\hline
+{\em q1\+\_\+current} & almacena el valor actual del angulo del primer eslabon de Sandsara (en radianes). \\
+\hline
+{\em q2\+\_\+current} & almacena el valor actual del angulo del segundo eslabon de Sandsara (en radianes). \\
+\hline
+{\em z\+Current} & se utiliza como referencia del componente modulo para los archivos thr (en milimetros). \\
+\hline
+{\em theta\+Current} & se utiliza como referencia del componente del angulo para los archivos thr (en radianes). \\
+\hline
+{\em coupling\+Angle} & es un angulo que se utiliza para saber cuanto rotar un archivo. \\
+\hline
+{\em constant\+Motor\+Speed} & Si esta variable es true, los motores se moveran a una velocidad constante siempre, si es false la velocidad dependera de la distancia recorrida de un punto a otro. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_motors_a4459e53ea71a60a5c00d8ddb5741e61a}\label{class_motors_a4459e53ea71a60a5c00d8ddb5741e61a}} 
+\index{Motors@{Motors}!arcLength@{arcLength}}
+\index{arcLength@{arcLength}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{arcLength()}{arcLength()}}
+{\footnotesize\ttfamily double Motors\+::arc\+Length (\begin{DoxyParamCaption}\item[{double}]{deltaZ,  }\item[{double}]{delta\+Theta,  }\item[{double}]{z\+Init }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+calcula la longitud de arco que se forma al girar de un punto A a un punto B en coordenadas polares. 
+
+En otras palabras, se calcula la distancia que se recorre en una trayectoria espiral de un punto A a un punto B, el numero de grados totales que gira esta definido por el parametro delta\+Theta. 
+\begin{DoxyParams}{Parameters}
+{\em deltaZ} & es la diferencia entre la componente modulo del punto final menos la componente modulo del punto inicial. \\
+\hline
+{\em delta\+Theta} & es la diferencia entre la componente angulo del punto final menos la componente angulo del punto inicial. \\
+\hline
+{\em z\+Init} & es la componente modulo del punto inicial. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_a152e1ecd35dcda8747b49189582fe245}\label{class_motors_a152e1ecd35dcda8747b49189582fe245}} 
+\index{Motors@{Motors}!getCurrentAngle@{getCurrentAngle}}
+\index{getCurrentAngle@{getCurrentAngle}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getCurrentAngle()}{getCurrentAngle()}}
+{\footnotesize\ttfamily double Motors\+::get\+Current\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calcula el angulo de la posicion actual de la esfera. 
+
+\begin{DoxyReturn}{Returns}
+El angulo, medido desde la horizontal, de la posicion actual del robot. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+el angulo se encuentra en el rango de \mbox{[}0 , 2$\ast$\+PI) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_motors_ad5a040616f1c428a839b1cc03495295d}\label{class_motors_ad5a040616f1c428a839b1cc03495295d}} 
+\index{Motors@{Motors}!getCurrentModule@{getCurrentModule}}
+\index{getCurrentModule@{getCurrentModule}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getCurrentModule()}{getCurrentModule()}}
+{\footnotesize\ttfamily double Motors\+::get\+Current\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calcula el modulo de la posicion actual de la esfera. 
+
+\begin{DoxyReturn}{Returns}
+La distancia entre el centro y la posicion actual del robot. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_abc856656f13dd05e5602084d3d7811d6}\label{class_motors_abc856656f13dd05e5602084d3d7811d6}} 
+\index{Motors@{Motors}!getRealQ1@{getRealQ1}}
+\index{getRealQ1@{getRealQ1}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getRealQ1()}{getRealQ1()}}
+{\footnotesize\ttfamily double Motors\+::get\+Real\+Q1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro real\+Q1. 
+
+\begin{DoxyReturn}{Returns}
+la variable miembro real\+Q1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_a9330d58004c467bd4a9f3f9087a3510f}\label{class_motors_a9330d58004c467bd4a9f3f9087a3510f}} 
+\index{Motors@{Motors}!getRealQ2@{getRealQ2}}
+\index{getRealQ2@{getRealQ2}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getRealQ2()}{getRealQ2()}}
+{\footnotesize\ttfamily double Motors\+::get\+Real\+Q2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro real\+Q1. 
+
+\begin{DoxyReturn}{Returns}
+la variable miembro real\+Q2. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_a85230d97cfd7045277f2352f9673f4d7}\label{class_motors_a85230d97cfd7045277f2352f9673f4d7}} 
+\index{Motors@{Motors}!getSpeed@{getSpeed}}
+\index{getSpeed@{getSpeed}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getSpeed()}{getSpeed()}}
+{\footnotesize\ttfamily double Motors\+::get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+obtiene el valor de la velocidad actual de Sandsara en milimetros por segundo 
+
+\begin{DoxyReturn}{Returns}
+la variable miembro millimeter\+Speed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_ab54236c39a16cd7537870255548f5511}\label{class_motors_ab54236c39a16cd7537870255548f5511}} 
+\index{Motors@{Motors}!getThetaCurrent@{getThetaCurrent}}
+\index{getThetaCurrent@{getThetaCurrent}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getThetaCurrent()}{getThetaCurrent()}}
+{\footnotesize\ttfamily double Motors\+::get\+Theta\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+obtiene la varieble miembro theta\+Current 
+
+\begin{DoxyReturn}{Returns}
+the variable member theta\+Current 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_a874ea14d554cbd35187193ebf7fafff1}\label{class_motors_a874ea14d554cbd35187193ebf7fafff1}} 
+\index{Motors@{Motors}!getZCurrent@{getZCurrent}}
+\index{getZCurrent@{getZCurrent}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{getZCurrent()}{getZCurrent()}}
+{\footnotesize\ttfamily double Motors\+::get\+Z\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+obtiene la variable miembro z\+Current 
+
+\begin{DoxyReturn}{Returns}
+the variable member z\+Current 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_a5bf25c15446fa6e01985eb09e9aa4bed}\label{class_motors_a5bf25c15446fa6e01985eb09e9aa4bed}} 
+\index{Motors@{Motors}!init@{init}}
+\index{init@{init}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Motors\+::init (\begin{DoxyParamCaption}\item[{double}]{x\+Init = {\ttfamily 0},  }\item[{double}]{y\+Init = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+inicializa el objeto \mbox{\hyperlink{class_motors}{Motors}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Init} & es la coordenada en el eje x, medida en milimetros, que se desea como posicion inicial, por defecto es 0. \\
+\hline
+{\em y\+Init} & es la coordenada en el eje y, medida en milimetros, que se desea como posicion inicial, por defecto es 0. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_a077cfdc8ac333c2e69519da8a688b8e5}\label{class_motors_a077cfdc8ac333c2e69519da8a688b8e5}} 
+\index{Motors@{Motors}!module@{module}}
+\index{module@{module}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{module()}{module()}}
+{\footnotesize\ttfamily double Motors\+::module (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia entre 2 puntos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & es el valor en el eje x del primer punto. \\
+\hline
+{\em y1} & es el valor en el eje y del primer punto. \\
+\hline
+{\em x2} & es el valor en el eje x del segundo punto. \\
+\hline
+{\em y2} & es el valor en el eje y del segundo punto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+la distancia entre ambos puntos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_a6ed7ba7979189ca66273497b8c2f6061}\label{class_motors_a6ed7ba7979189ca66273497b8c2f6061}} 
+\index{Motors@{Motors}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}}
+{\footnotesize\ttfamily void Motors\+::move\+To (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{bool}]{little\+Movement = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Esta funcion hace que el robot se mueve de su posicion actual hacia una nueva posicion x,y. 
+
+Si las coordenadas x,y se encuentran fuera del espacio de trabajo, la funcion se encarga de limitarlas. La posicion x,y se mide en milimetros. Si la distancia que tiene que recorrer es menor a 0.\+5 milimetros entonces no avanza a menos que el parametro little\+Movement sea verdadero. Si la distancia a recorrer es mayor a 1.\+1 milimetros, entonces se avanza en linea recta al nuevo punto en una trayectoria de puntos equidistantes a 1 mm formando una linea recta. 
+\begin{DoxyParams}{Parameters}
+{\em x} & es la coordenada en el eje x, medida en milimetros, hacia donde se desea avanzar. \\
+\hline
+{\em y} & es la coordenada en el eje y, medida en milimetros, hacia donde se desea avanzar. \\
+\hline
+{\em little\+Movement} & es una variable que si su valor es false entonces no se movera a menos que la distancia minima sea 0.\+5 mm y true para que se mueva en cualquier caso. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_a3b835e5006b1bdd46bcba51e0c936f77}\label{class_motors_a3b835e5006b1bdd46bcba51e0c936f77}} 
+\index{Motors@{Motors}!normalizeAngle@{normalizeAngle}}
+\index{normalizeAngle@{normalizeAngle}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{normalizeAngle()}{normalizeAngle()}}
+{\footnotesize\ttfamily double Motors\+::normalize\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+normaliza un angulo para estar en el rango de \mbox{[}0,2$\ast$\+PI). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & es el angulo, medido en radianes, que se desea normalizar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+un valor con el rango de \mbox{[}0 , 2$\ast$\+PI). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_aa92d3a59c59ac8c1fb2125ea4b745255}\label{class_motors_aa92d3a59c59ac8c1fb2125ea4b745255}} 
+\index{Motors@{Motors}!position@{position}}
+\index{position@{position}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily int Motors\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+devuelve un valor para saber en donde se encuentra la esfera. 
+
+\begin{DoxyReturn}{Returns}
+un entero que puede significar lo siguiente. 0, se encuentra en el centro o a 2 mm. 1, no se encuentra ni en el centro ni en la orilla. 2, se cuentra en la orilla o a 2 mm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_motors_a5d4e72cba3141c3c5622651206cf0557}\label{class_motors_a5d4e72cba3141c3c5622651206cf0557}} 
+\index{Motors@{Motors}!rotate@{rotate}}
+\index{rotate@{rotate}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Motors\+::rotate (\begin{DoxyParamCaption}\item[{double \&}]{x,  }\item[{double \&}]{y,  }\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+rota la posicion x,y con centro en 0,0 tantos grados como se desee. 
+
+por ejemplo, si se rota la posicion (1,0) 90 grados el resultado seria un punto (0,1). 
+\begin{DoxyParams}{Parameters}
+{\em x} & coordenada en el eje x. \\
+\hline
+{\em y} & coordenada en el eje y. \\
+\hline
+{\em angle} & es el angulo que se desea rotar los puntos x,y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+los valores x,y se pasan por referencia. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_motors_a2b3832775e7f9a8fd2275c3684364ccd}\label{class_motors_a2b3832775e7f9a8fd2275c3684364ccd}} 
+\index{Motors@{Motors}!setRealQ1@{setRealQ1}}
+\index{setRealQ1@{setRealQ1}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setRealQ1()}{setRealQ1()}}
+{\footnotesize\ttfamily void Motors\+::set\+Real\+Q1 (\begin{DoxyParamCaption}\item[{double}]{q1 }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro real\+Q1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q1} & es el valor que se le va a asignar a la variable miembro real\+Q1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_a6bf6c260d12c399b2dabae207eb01c40}\label{class_motors_a6bf6c260d12c399b2dabae207eb01c40}} 
+\index{Motors@{Motors}!setRealQ2@{setRealQ2}}
+\index{setRealQ2@{setRealQ2}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setRealQ2()}{setRealQ2()}}
+{\footnotesize\ttfamily void Motors\+::set\+Real\+Q2 (\begin{DoxyParamCaption}\item[{double}]{q2 }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro real\+Q2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q2} & es el valor que se le va a asignar a la variable miembro real\+Q1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_ad7b80ae03cff42126cc4a03af368d505}\label{class_motors_ad7b80ae03cff42126cc4a03af368d505}} 
+\index{Motors@{Motors}!setRealSpeed1@{setRealSpeed1}}
+\index{setRealSpeed1@{setRealSpeed1}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setRealSpeed1()}{setRealSpeed1()}}
+{\footnotesize\ttfamily void Motors\+::set\+Real\+Speed1 (\begin{DoxyParamCaption}\item[{double}]{speed1 }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro real\+Speed1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed1} & es el valor que se le va a asignar a la variable miembro real\+Q1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_a464775b49c7fe31206a8704fe515c456}\label{class_motors_a464775b49c7fe31206a8704fe515c456}} 
+\index{Motors@{Motors}!setRealSpeed2@{setRealSpeed2}}
+\index{setRealSpeed2@{setRealSpeed2}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setRealSpeed2()}{setRealSpeed2()}}
+{\footnotesize\ttfamily void Motors\+::set\+Real\+Speed2 (\begin{DoxyParamCaption}\item[{double}]{speed2 }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro real\+Speed2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed2} & es el valor que se le va a asignar a la variable miembro real\+Q1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_adcee54e76ae3767dd83658beb5d1a912}\label{class_motors_adcee54e76ae3767dd83658beb5d1a912}} 
+\index{Motors@{Motors}!setSpeed@{setSpeed}}
+\index{setSpeed@{setSpeed}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setSpeed()}{setSpeed()}}
+{\footnotesize\ttfamily void Motors\+::set\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+cambia la velocidad de Sand\+Sara. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & es la nueva valocidad, en milimetros por segundo, que va a tener de Sand\+Sara. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_motors_a5c68fb90f82b7274db17d3e39d88eb9f}\label{class_motors_a5c68fb90f82b7274db17d3e39d88eb9f}} 
+\index{Motors@{Motors}!setThetaCurrent@{setThetaCurrent}}
+\index{setThetaCurrent@{setThetaCurrent}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setThetaCurrent()}{setThetaCurrent()}}
+{\footnotesize\ttfamily void Motors\+::set\+Theta\+Current (\begin{DoxyParamCaption}\item[{double}]{theta }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro theta\+\_\+current. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & es el valor que se le va a asignar a la variable miembro theta\+Current. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Esto es importante para que los archivos .thr tengan una referencia de donde empezar a moverse. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_motors_aa9b38760ab9d9d35c292fb5f7a670d80}\label{class_motors_aa9b38760ab9d9d35c292fb5f7a670d80}} 
+\index{Motors@{Motors}!setZCurrent@{setZCurrent}}
+\index{setZCurrent@{setZCurrent}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{setZCurrent()}{setZCurrent()}}
+{\footnotesize\ttfamily void Motors\+::set\+Z\+Current (\begin{DoxyParamCaption}\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+moficica el miembro z\+\_\+current. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & es el valor que se le va a asignar a la variable miembro z\+Current. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Esto es importante para que los archivos .thr tengan una referencia de donde empezar a moverse. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_motors_a6760021c3006e83ddaa031dbe811dcbc}\label{class_motors_a6760021c3006e83ddaa031dbe811dcbc}} 
+\index{Motors@{Motors}!thetaPolar@{thetaPolar}}
+\index{thetaPolar@{thetaPolar}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{thetaPolar()}{thetaPolar()}}
+{\footnotesize\ttfamily double Motors\+::theta\+Polar (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+calcula el angulo que se forma con la horizontal, de un punto x,y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & es el valor de la coordenada en el eje x, medido en milimetros. \\
+\hline
+{\em y} & es el valor de la coordenada en el eje y, medido en milimetros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el angulo, medido desde la horizontal, del punto x,y. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+el angulo se encuentra en el rango de \mbox{[}0 , 2$\ast$\+PI) 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_motors_af18e91b114aa953b0f23d6d797706cc7}\label{class_motors_af18e91b114aa953b0f23d6d797706cc7}} 
+\index{Motors@{Motors}!zPolar@{zPolar}}
+\index{zPolar@{zPolar}!Motors@{Motors}}
+\doxysubsubsection{\texorpdfstring{zPolar()}{zPolar()}}
+{\footnotesize\ttfamily double Motors\+::z\+Polar (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+calcula el valor del modulo del punto en coordenadas polares 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & es el valor en el eje x del punto. \\
+\hline
+{\em y} & es el valor en el eje y del punto. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el modulo del punto en coordenadas polares. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Motors.\+h\item 
+src/Motors.\+cpp\end{DoxyCompactItemize}

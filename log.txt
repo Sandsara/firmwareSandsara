@@ -1,0 +1,331 @@
+#verbose mode
+pio run -v -t upload
+
+log data
+
+Processing esp32dev (platform: espressif32; board: esp32dev; framework: arduino; board_build.f_cpu: 240000000L; board_build.flash_mode: qio; upload_speed: 1500000; lib_deps: TMCStepper@0.6.2, Adafruit NeoPixel, AccelStepper@1.61, MeanFilterLib, FastLED, SdFat@1.1.4; monitor_speed: 115200)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (2.0.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (esp-prog) External (esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 3.10004.200129 (1.0.4) 
+ - tool-esptoolpy 1.20600.0 (2.6.0) 
+ - tool-mkspiffs 2.230.0 (2.30) 
+ - toolchain-xtensa32 2.50200.80 (5.2.0)
+LDF: Library Dependency Finder -> http://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 32 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- <TMCStepper> 0.6.2 (/home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/libdeps/esp32dev/TMCStepper)
+|   |-- <SPI> 1.0 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/SPI)
+|-- <Adafruit NeoPixel> 1.6.0 (/home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/libdeps/esp32dev/Adafruit NeoPixel)
+|-- <AccelStepper> 1.61.0 (/home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/libdeps/esp32dev/AccelStepper)
+|-- <MeanFilterLib> 1.0.0 (/home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/libdeps/esp32dev/MeanFilterLib)
+|-- <FastLED> 3.3.3 (/home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/libdeps/esp32dev/FastLED)
+|   |-- <SPI> 1.0 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/SPI)
+|-- <SdFat> 1.1.4 (/home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/libdeps/esp32dev/SdFat)
+|   |-- <SPI> 1.0 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/SPI)
+|-- <EEPROM> 1.0.3 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/EEPROM)
+|-- <SPI> 1.0 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/SPI)
+|-- <Update> 1.0 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/Update)
+|-- <BluetoothSerial> 1.0 (/home/kno/.platformio/packages/framework-arduinoespressif32/libraries/BluetoothSerial)
+Building in release mode
+xtensa-esp32-elf-g++ -o .pio/build/esp32dev/firmware.elf -T esp32_out.ld -nostdlib -Wl,-static -u call_user_start_cpu0 -Wl,--undefined=uxTopUsedPriority -Wl,--gc-sections -Wl,-EL -T esp32.common.ld -T esp32.rom.ld -T esp32.peripherals.ld -T esp32.rom.libgcc.ld -T esp32.rom.spiram_incompatible_fns.ld -u ld_include_panic_highint_hdl -u __cxa_guard_dummy -u __cxx_fatal_exception .pio/build/esp32dev/lib386/FastLED/FastLED.cpp.o .pio/build/esp32dev/lib386/FastLED/bitswap.cpp.o .pio/build/esp32dev/lib386/FastLED/colorpalettes.cpp.o .pio/build/esp32dev/lib386/FastLED/colorutils.cpp.o .pio/build/esp32dev/lib386/FastLED/hsv2rgb.cpp.o .pio/build/esp32dev/lib386/FastLED/lib8tion.cpp.o .pio/build/esp32dev/lib386/FastLED/noise.cpp.o .pio/build/esp32dev/lib386/FastLED/platforms.cpp.o .pio/build/esp32dev/lib386/FastLED/power_mgt.cpp.o .pio/build/esp32dev/lib386/FastLED/wiring.cpp.o .pio/build/esp32dev/src/Bluetooth.cpp.o .pio/build/esp32dev/src/Calibration.cpp.o .pio/build/esp32dev/src/Motors.cpp.o .pio/build/esp32dev/src/SdFiles.cpp.o .pio/build/esp32dev/src/Testing.cpp.o .pio/build/esp32dev/src/main.cpp.o -L.pio/build/esp32dev -L/home/kno/.platformio/packages/framework-arduinoespressif32/tools/sdk/lib -L/home/kno/.platformio/packages/framework-arduinoespressif32/tools/sdk/ld -Wl,--start-group .pio/build/esp32dev/lib448/libSPI.a .pio/build/esp32dev/lib1ce/libTMCStepper.a ".pio/build/esp32dev/libac5/libAdafruit NeoPixel.a" .pio/build/esp32dev/libecd/libAccelStepper.a .pio/build/esp32dev/lib853/libMeanFilterLib.a .pio/build/esp32dev/lib32e/libSdFat.a .pio/build/esp32dev/lib31e/libEEPROM.a .pio/build/esp32dev/lib247/libUpdate.a .pio/build/esp32dev/libbd6/libBluetoothSerial.a .pio/build/esp32dev/libFrameworkArduinoVariant.a .pio/build/esp32dev/libFrameworkArduino.a -lgcc -lesp32 -lphy -lesp_http_client -lmbedtls -lrtc -lesp_http_server -lbtdm_app -lspiffs -lbootloader_support -lmdns -lnvs_flash -lfatfs -lpp -lnet80211 -ljsmn -lface_detection -llibsodium -lvfs -ldl_lib -llog -lfreertos -lcxx -lsmartconfig_ack -lxtensa-debug-module -lheap -ltcpip_adapter -lmqtt -lulp -lfd -lfb_gfx -lnghttp -lprotocomm -lsmartconfig -lm -lethernet -limage_util -lc_nano -lsoc -ltcp_transport -lc -lmicro-ecc -lface_recognition -ljson -lwpa_supplicant -lmesh -lesp_https_ota -lwpa2 -lexpat -llwip -lwear_levelling -lapp_update -ldriver -lbt -lespnow -lcoap -lasio -lnewlib -lconsole -lapp_trace -lesp32-camera -lhal -lprotobuf-c -lsdmmc -lcore -lpthread -lcoexist -lfreemodbus -lspi_flash -lesp-tls -lwpa -lwifi_provisioning -lwps -lesp_adc_cal -lesp_event -lopenssl -lesp_ringbuf -lfr -lstdc++ -Wl,--end-group
+<lambda>(["checkprogsize"], [".pio/build/esp32dev/firmware.elf"])
+MethodWrapper(["checkprogsize"], [".pio/build/esp32dev/firmware.elf"])
+"/home/kno/.platformio/penv/bin/python" "/home/kno/.platformio/packages/tool-esptoolpy/esptool.py" --chip esp32 elf2image --flash_mode qio --flash_freq 40m --flash_size 4MB -o .pio/build/esp32dev/firmware.bin .pio/build/esp32dev/firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [===       ]  27.4% (used 89680 bytes from 327680 bytes)
+Flash: [========  ]  81.9% (used 1073387 bytes from 1310720 bytes)
+.pio/build/esp32dev/firmware.elf  :
+section                                                                                                                                        size         addr
+.rtc.text                                                                                                                                         0   1074528256
+.rtc.dummy                                                                                                                                        0   1073217536
+.rtc.force_fast                                                                                                                                   0   1073217536
+.rtc_noinit                                                                                                                                       0   1342177792
+.rtc.force_slow                                                                                                                                   0   1342177792
+.iram0.vectors                                                                                                                                 1024   1074266112
+.iram0.text                                                                                                                                   84616   1074267136
+.dram0.data                                                                                                                                   12688   1073470304
+.noinit                                                                                                                                           0   1073482992
+.dram0.bss                                                                                                                                    76992   1073482992
+.flash.rodata                                                                                                                                181388   1061158944
+.flash.text                                                                                                                                  793671   1074593816
+.debug_frame                                                                                                                                 284376            0
+.debug_info                                                                                                                                 6559409            0
+.debug_abbrev                                                                                                                                586909            0
+.debug_loc                                                                                                                                  1641184            0
+.debug_aranges                                                                                                                               106624            0
+.debug_ranges                                                                                                                                154616            0
+.debug_macro                                                                                                                                 339783            0
+.debug_line                                                                                                                                 2136067            0
+.debug_str                                                                                                                                  1786996            0
+.comment                                                                                                                                        360            0
+.xtensa.info                                                                                                                                     56            0
+.xt.prop._ZN14CLEDController17computeAdjustmentEhRK4CRGBS2_                                                                                      60            0
+.xt.lit._ZN4File9availableEv                                                                                                                      8            0
+.xt.lit._ZN4File5flushEv                                                                                                                          0            0
+.xt.lit._ZN4File4peekEv                                                                                                                           0            0
+.xt.lit._ZN4File4readEv                                                                                                                           0            0
+.xt.lit._ZN4File5writeEPKhj                                                                                                                       0            0
+.xt.lit._ZN4File5writeEh                                                                                                                          0            0
+.xt.lit._ZN4FileD5Ev                                                                                                                              8            0
+.xt.lit._ZNK6String6lengthEv                                                                                                                      8            0
+.xt.lit._ZN13FatFileSystem4openERK6Stringi                                                                                                        8            0
+.xt.prop._ZN4File9availableEv                                                                                                                    72            0
+.xt.prop._ZN4File5flushEv                                                                                                                        36            0
+.xt.prop._ZN4File4peekEv                                                                                                                         36            0
+.xt.prop._ZN4File4readEv                                                                                                                         36            0
+.xt.prop._ZN4File5writeEPKhj                                                                                                                     36            0
+.xt.prop._ZN4File5writeEh                                                                                                                        36            0
+.xt.prop._ZN4FileD5Ev                                                                                                                            12            0
+.xt.prop._ZNK6String6lengthEv                                                                                                                    96            0
+.xt.prop._ZN13FatFileSystem4openERK6Stringi                                                                                                      96            0
+.xt.prop._ZN6Stream9readBytesEPhj                                                                                                                36            0
+.xt.prop._ZN4FileD2Ev                                                                                                                            36            0
+.xt.prop._ZN4FileD0Ev                                                                                                                            36            0
+.xt.prop._ZTV4File                                                                                                                               12            0
+.xt.prop._ZN10MeanFilterIlE8AddValueEl                                                                                                           36            0
+.xt.prop._ZTV14TMC2209Stepper                                                                                                                    12            0
+.xt.prop._ZN12AccelStepperaSEOS_                                                                                                                 60            0
+.xt.lit._ZNK6String9substringEj                                                                                                                   0            0
+.xt.lit._ZN7FatFile4readEv                                                                                                                        0            0
+.xt.lit._ZN4FileC5Ev                                                                                                                              0            0
+.xt.lit._ZN4FileaSEOS_                                                                                                                            0            0
+.xt.prop._ZNK6String9substringEj                                                                                                                 60            0
+.xt.prop._ZN7FatFile4readEv                                                                                                                      48            0
+.xt.prop._ZN4FileC5Ev                                                                                                                             0            0
+.xt.prop._ZN4FileaSEOS_                                                                                                                          36            0
+.xt.prop._ZN4FileC2Ev                                                                                                                            36            0
+.xt.lit._ZN5SdFat5beginEh11SPISettings                                                                                                            8            0
+.xt.prop._ZN5SdFat5beginEh11SPISettings                                                                                                         132            0
+.xt.lit._ZN13CRGBPalette16aSEPKh                                                                                                                  8            0
+.xt.lit._ZN14CRGBPalette256aSERKS_                                                                                                                8            0
+.xt.lit._ZN14CRGBPalette256aSERA16_Kj                                                                                                             0            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE5emptyEPj                                                           8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE8i2sResetEv                                                         8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE17allocateDMABufferEi                                               8            0
+.xt.lit._ZN15PixelControllerIL6EOrder66ELi1ELj4294967295EE21init_binary_ditheringEv                                                               8            0
+.xt.lit._ZN19CPixelLEDControllerIL6EOrder66ELi1ELj4294967295EE9showColorERK4CRGBiS2_                                                              8            0
+.xt.lit._ZN19CPixelLEDControllerIL6EOrder66ELi1ELj4294967295EE4showEPK4CRGBiS2_                                                                   0            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE15initBitPatternsEv                                                 8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE7i2sInitEv                                                          8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE4initEv                                                             8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE14transpose8rS32EPhiiS2_                                            8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE10fillBufferEv                                                      8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE10showPixelsER15PixelControllerILS0_66ELi1ELj4294967295EE           8            0
+.xt.lit._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE16interruptHandlerEPv                                               0            0
+.xt.prop._ZN13CRGBPalette16aSEPKh                                                                                                                84            0
+.xt.prop._ZN14CRGBPalette256aSERKS_                                                                                                              48            0
+.xt.prop._ZN14CRGBPalette256aSERA16_Kj                                                                                                           36            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE5emptyEPj                                                        108            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE8i2sResetEv                                                       48            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE17allocateDMABufferEi                                             48            0
+.xt.prop._ZN15PixelControllerIL6EOrder66ELi1ELj4294967295EE21init_binary_ditheringEv                                                            120            0
+.xt.prop._ZN19CPixelLEDControllerIL6EOrder66ELi1ELj4294967295EE9showColorERK4CRGBiS2_                                                            72            0
+.xt.prop._ZN19CPixelLEDControllerIL6EOrder66ELi1ELj4294967295EE4showEPK4CRGBiS2_                                                                 60            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE15initBitPatternsEv                                              180            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE7i2sInitEv                                                        72            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE4initEv                                                           48            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE14transpose8rS32EPhiiS2_                                          48            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE10fillBufferEv                                                   144            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE10showPixelsER15PixelControllerILS0_66ELi1ELj4294967295EE         96            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE16interruptHandlerEPv                                             72            0
+.xt.prop._ZN14CLEDController4sizeEv                                                                                                              36            0
+.xt.prop._ZN14CLEDController9clearLedsEi                                                                                                         36            0
+.xt.prop._ZNK19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE17getMaxRefreshRateEv                                            36            0
+.xt.prop._ZN15PixelControllerIL6EOrder66ELi1ELj4294967295EE11initOffsetsEi                                                                       36            0
+.xt.prop._ZN19ClocklessControllerILi32ELi60ELi150ELi90EL6EOrder66ELi0ELb0ELi5EE4pgcdEiiiii                                                       84            0
+.xt.prop._ZTV7WS2812BILh32EL6EOrder66EE                                                                                                          12            0
+.xt.prop._ZGVZN8CFastLED7addLedsI7WS2812BLh32EL6EOrder66EEER14CLEDControllerP4CRGBiiE1c                                                          12            0
+.xt.prop._ZZN8CFastLED7addLedsI7WS2812BLh32EL6EOrder66EEER14CLEDControllerP4CRGBiiE1c                                                            12            0
+.xt.prop._ZTV14TMC2208Stepper                                                                                                                    12            0
+.xt.lit._ZN14TMC2208Stepper13_sendDatagramI6StreamEEyRT_Phht                                                                                      8            0
+.xt.prop._ZN14TMC2208Stepper13_sendDatagramI6StreamEEyRT_Phht                                                                                   240            0
+.xt.prop._ZTV12AccelStepper                                                                                                                      12            0
+.xt.lit._ZN9FatVolume9cacheSyncEv                                                                                                                 0            0
+.xt.prop._ZN9FatVolume9cacheSyncEv                                                                                                               36            0
+.xt.lit._ZN9SdSpiCard8cardAcmdEhj                                                                                                                 0            0
+.xt.prop._ZN9SdSpiCard8cardAcmdEhj                                                                                                               36            0
+.xt.lit._ZNKSt8functionIFvjjEEclEjj                                                                                                               8            0
+.xt.prop._ZNKSt8functionIFvjjEEclEjj                                                                                                             60            0
+.xt.prop._ZNSt14_Function_baseD2Ev                                                                                                               48            0
+.xt.prop._ZTV15BluetoothSerial                                                                                                                   12            0
+.xt.lit._ZN14HardwareSerialD5Ev                                                                                                                   0            0
+.xt.prop._ZN14HardwareSerialD5Ev                                                                                                                  0            0
+.xt.prop._ZN14HardwareSerialD2Ev                                                                                                                 36            0
+.xt.prop._ZN14HardwareSerialD0Ev                                                                                                                 36            0
+.xt.prop._ZTV14HardwareSerial                                                                                                                    12            0
+.xt.lit._ZN9IPAddressD5Ev                                                                                                                         0            0
+.xt.prop._ZN9IPAddressD5Ev                                                                                                                        0            0
+.xt.prop._ZN9IPAddressD2Ev                                                                                                                       36            0
+.xt.prop._ZN9IPAddressD0Ev                                                                                                                       36            0
+.xt.prop._ZTV9IPAddress                                                                                                                          12            0
+.xt.lit._ZN5Print5writeEPKc                                                                                                                       0            0
+.xt.prop._ZN5Print5writeEPKc                                                                                                                     48            0
+.xt.prop._ZTV5Print                                                                                                                              12            0
+.xt.lit._ZN6String4initEv                                                                                                                         8            0
+.xt.prop._ZN6String4initEv                                                                                                                       60            0
+.xt.prop._ZNK6String3lenEv                                                                                                                       60            0
+.xt.prop._ZN6String6setLenEi                                                                                                                     60            0
+.xt.prop._ZNK6String7wbufferEv                                                                                                                   48            0
+.xt.lit._ZN3nvs4ItemC5EhNS_8ItemTypeEhPKch                                                                                                        0            0
+.xt.prop._ZN3nvs4ItemC5EhNS_8ItemTypeEhPKch                                                                                                       0            0
+.xt.prop._ZN3nvs4ItemC2EhNS_8ItemTypeEhPKch                                                                                                     108            0
+.xt.prop._ZTISt9exception                                                                                                                        12            0
+.xt.prop._ZTISt9bad_alloc                                                                                                                        12            0
+.xt.prop._ZTVN10__cxxabiv117__class_type_infoE                                                                                                   12            0
+.xt.lit._ZNK9__gnu_cxx24__concurrence_lock_error4whatEv                                                                                           8            0
+.xt.lit._ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv                                                                                         8            0
+.xt.lit._ZN9__gnu_cxx24__concurrence_lock_errorD5Ev                                                                                               8            0
+.xt.lit._ZN9__gnu_cxx26__concurrence_unlock_errorD5Ev                                                                                             8            0
+.xt.lit._ZN9__gnu_cxx7__mutex4lockEv                                                                                                              8            0
+.xt.lit._ZN9__gnu_cxx13__scoped_lockD5Ev                                                                                                          8            0
+.xt.prop._ZNK9__gnu_cxx24__concurrence_lock_error4whatEv                                                                                         48            0
+.xt.prop._ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv                                                                                       48            0
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD5Ev                                                                                             12            0
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD5Ev                                                                                           12            0
+.xt.prop._ZN9__gnu_cxx7__mutex4lockEv                                                                                                            60            0
+.xt.prop._ZN9__gnu_cxx13__scoped_lockD5Ev                                                                                                        12            0
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD2Ev                                                                                             36            0
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD2Ev                                                                                           36            0
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD0Ev                                                                                             36            0
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD0Ev                                                                                           36            0
+.xt.prop._ZN9__gnu_cxx13__scoped_lockD2Ev                                                                                                        72            0
+.xt.prop._ZTIN9__gnu_cxx24__concurrence_lock_errorE                                                                                              12            0
+.xt.prop._ZTIN9__gnu_cxx26__concurrence_unlock_errorE                                                                                            12            0
+.xt.prop._ZTVN9__gnu_cxx24__concurrence_lock_errorE                                                                                              12            0
+.xt.prop._ZTVN9__gnu_cxx26__concurrence_unlock_errorE                                                                                            12            0
+.xt.prop._ZTVSt9bad_alloc                                                                                                                        12            0
+.xt.prop._ZTISt17bad_function_call                                                                                                               12            0
+.xt.prop._ZTVSt17bad_function_call                                                                                                               12            0
+.xt.prop._ZTVN10__cxxabiv120__si_class_type_infoE                                                                                                12            0
+.xt.prop._ZGVNSt7collateIwE2idE                                                                                                                  12            0
+.xt.prop._ZGVNSt8messagesIwE2idE                                                                                                                 12            0
+.xt.prop._ZGVNSt8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                                     12            0
+.xt.prop._ZGVNSt8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                                     12            0
+.xt.prop._ZGVNSt11__timepunctIwE2idE                                                                                                             12            0
+.xt.prop._ZGVNSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                                      12            0
+.xt.prop._ZGVNSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                                      12            0
+.xt.prop._ZGVNSt8numpunctIwE2idE                                                                                                                 12            0
+.xt.prop._ZGVNSt9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                                    12            0
+.xt.prop._ZGVNSt9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                                    12            0
+.xt.prop._ZGVNSt10moneypunctIwLb1EE2idE                                                                                                          12            0
+.xt.prop._ZGVNSt10moneypunctIwLb0EE2idE                                                                                                          12            0
+.xt.prop._ZGVNSt7collateIcE2idE                                                                                                                  12            0
+.xt.prop._ZGVNSt8messagesIcE2idE                                                                                                                 12            0
+.xt.prop._ZGVNSt8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                                     12            0
+.xt.prop._ZGVNSt8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                                     12            0
+.xt.prop._ZGVNSt11__timepunctIcE2idE                                                                                                             12            0
+.xt.prop._ZGVNSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                                      12            0
+.xt.prop._ZGVNSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                                      12            0
+.xt.prop._ZGVNSt8numpunctIcE2idE                                                                                                                 12            0
+.xt.prop._ZGVNSt9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                                    12            0
+.xt.prop._ZGVNSt9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                                    12            0
+.xt.prop._ZGVNSt10moneypunctIcLb1EE2idE                                                                                                          12            0
+.xt.prop._ZGVNSt10moneypunctIcLb0EE2idE                                                                                                          12            0
+.xt.prop._ZGVNSt7__cxx117collateIcE2idE                                                                                                          12            0
+.xt.prop._ZGVNSt7__cxx118messagesIcE2idE                                                                                                         12            0
+.xt.prop._ZGVNSt7__cxx118time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                             12            0
+.xt.prop._ZGVNSt7__cxx118numpunctIcE2idE                                                                                                         12            0
+.xt.prop._ZGVNSt7__cxx119money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                            12            0
+.xt.prop._ZGVNSt7__cxx119money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE2idE                                                            12            0
+.xt.prop._ZGVNSt7__cxx1110moneypunctIcLb1EE2idE                                                                                                  12            0
+.xt.prop._ZGVNSt7__cxx1110moneypunctIcLb0EE2idE                                                                                                  12            0
+.xt.prop._ZGVNSt7__cxx117collateIwE2idE                                                                                                          12            0
+.xt.prop._ZGVNSt7__cxx118messagesIwE2idE                                                                                                         12            0
+.xt.prop._ZGVNSt7__cxx118time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                             12            0
+.xt.prop._ZGVNSt7__cxx118numpunctIwE2idE                                                                                                         12            0
+.xt.prop._ZGVNSt7__cxx119money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                            12            0
+.xt.prop._ZGVNSt7__cxx119money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE2idE                                                            12            0
+.xt.prop._ZGVNSt7__cxx1110moneypunctIwLb1EE2idE                                                                                                  12            0
+.xt.prop._ZGVNSt7__cxx1110moneypunctIwLb0EE2idE                                                                                                  12            0
+Total                                                                                                                                      14751619
+esptool.py v2.6
+<lambda>(["upload"], [".pio/build/esp32dev/firmware.bin"])
+AVAILABLE: esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
+CURRENT: upload_protocol = esptool
+
+MethodWrapper(["upload"], [".pio/build/esp32dev/firmware.bin"])
+Warning! Please install `99-platformio-udev.rules`. 
+More details: https://docs.platformio.org/page/faq.html#platformio-udev-rules
+
+Auto-detected: /dev/ttyUSB0
+"/home/kno/.platformio/penv/bin/python" "/home/kno/.platformio/packages/tool-esptoolpy/esptool.py" --chip esp32 --port "/dev/ttyUSB0" --baud 1500000 --before default_reset --after hard_reset write_flash -z --flash_mode dio --flash_freq 40m --flash_size detect 0x1000 /home/kno/.platformio/packages/framework-arduinoespressif32/tools/sdk/bin/bootloader_qio_40m.bin 0x8000 /home/kno/Desktop/SandSaraLunes19/Sandsara/.pio/build/esp32dev/partitions.bin 0xe000 /home/kno/.platformio/packages/framework-arduinoespressif32/tools/partitions/boot_app0.bin 0x10000 .pio/build/esp32dev/firmware.bin
+esptool.py v2.6
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32D0WDQ6 (revision 1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+MAC: 24:62:ab:e0:63:34
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 1500000
+Changed.
+Configuring flash size...
+Auto-detected Flash size: 4MB
+Compressed 17408 bytes to 11231...
+
+Writing at 0x00001000... (100 %)
+Wrote 17408 bytes (11231 compressed) at 0x00001000 in 0.1 seconds (effective 1433.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.0 seconds (effective 6852.3 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 47...
+
+Writing at 0x0000e000... (100 %)
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.0 seconds (effective 22336.9 kbit/s)...
+Hash of data verified.
+Compressed 1073504 bytes to 608167...
+
+Writing at 0x00010000... (2 %)
+Writing at 0x00014000... (5 %)
+Writing at 0x00018000... (7 %)
+Writing at 0x0001c000... (10 %)
+Writing at 0x00020000... (13 %)
+Writing at 0x00024000... (15 %)
+Writing at 0x00028000... (18 %)
+Writing at 0x0002c000... (21 %)
+Writing at 0x00030000... (23 %)
+Writing at 0x00034000... (26 %)
+Writing at 0x00038000... (28 %)
+Writing at 0x0003c000... (31 %)
+Writing at 0x00040000... (34 %)
+Writing at 0x00044000... (36 %)
+Writing at 0x00048000... (39 %)
+Writing at 0x0004c000... (42 %)
+Writing at 0x00050000... (44 %)
+Writing at 0x00054000... (47 %)
+Writing at 0x00058000... (50 %)
+Writing at 0x0005c000... (52 %)
+Writing at 0x00060000... (55 %)
+Writing at 0x00064000... (57 %)
+Writing at 0x00068000... (60 %)
+Writing at 0x0006c000... (63 %)
+Writing at 0x00070000... (65 %)
+Writing at 0x00074000... (68 %)
+Writing at 0x00078000... (71 %)
+Writing at 0x0007c000... (73 %)
+Writing at 0x00080000... (76 %)
+Writing at 0x00084000... (78 %)
+Writing at 0x00088000... (81 %)
+Writing at 0x0008c000... (84 %)
+Writing at 0x00090000... (86 %)
+Writing at 0x00094000... (89 %)
+Writing at 0x00098000... (92 %)
+Writing at 0x0009c000... (94 %)
+Writing at 0x000a0000... (97 %)
+Writing at 0x000a4000... (100 %)
+Wrote 1073504 bytes (608167 compressed) at 0x00010000 in 9.1 seconds (effective 948.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+=========================================================================== [SUCCESS] Took 17.31 seconds ===========================================================================

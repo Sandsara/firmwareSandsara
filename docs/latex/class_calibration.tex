@@ -1,0 +1,34 @@
+\hypertarget{class_calibration}{}\doxysection{Calibration Class Reference}
+\label{class_calibration}\index{Calibration@{Calibration}}
+
+
+Se encarga de encontrar el origen del robot.  
+
+
+
+
+{\ttfamily \#include $<$Calibration.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calibration_abab3b0a898b21bc1ccaf15bee3cbf598}\label{class_calibration_abab3b0a898b21bc1ccaf15bee3cbf598}} 
+void \mbox{\hyperlink{class_calibration_abab3b0a898b21bc1ccaf15bee3cbf598}{verificacion\+\_\+cal}} ()
+\begin{DoxyCompactList}\small\item\em Esta funcion se seleccionan las funciones necesarias para la verificacion de los brazos segun la polaridad correspondiente a cada iman. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calibration_a952cbf19969f879e0c1f2e30349d7a8b}\label{class_calibration_a952cbf19969f879e0c1f2e30349d7a8b}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{class_calibration_ac8c486b5ef1a744405e0a5b0ced6b1e0}\label{class_calibration_ac8c486b5ef1a744405e0a5b0ced6b1e0}} 
+int {\bfseries start} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Se encarga de encontrar el origen del robot. 
+
+Esta clase realiza una calibracion de los motores para encotrar una posicion de origen, esto se consigue con la lectura de unos sensores de efecto hall. La primera vez que se enciende Sandsara esta clase tambien se encarga de calibrar los sensores hall con respecto a la polaridad de los imanes en los brazos de Sandsara. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Calibration.\+h\item 
+src/Calibration.\+cpp\end{DoxyCompactItemize}
