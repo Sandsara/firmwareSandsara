@@ -30,9 +30,9 @@ in order to compile as easy as possible, we use platformIO and Visual Studio Cod
 ## Considerations
 It is important to modify the next file.
 
-modify the next lines in the HardwareSerial.cpp file (this file is part of the Core of the ESP32)
-line 10: #define RX1 9 change to #define RX1 26
-line 14: #define TX1 10 change to #define TX1 27
+modify the next lines in the HardwareSerial.cpp file (this file is part of the Core of the ESP32)  
+`line 10: #define RX1 9 change to #define RX1 26`  
+`line 14: #define TX1 10 change to #define TX1 27`
 
 ## License
 
