@@ -442,6 +442,7 @@ void setup()
                     0);
     delay(500); 
     if (!playListGlobal.equals(TESTINGPLAYLIST)){
+        Serial.println("iniciara espiral");
         goEdgeSpiral(false);
         Serial.println("termino espiral");
     }
@@ -977,6 +978,7 @@ void spiralGoTo(float module, float angle){
     degreesToRotate = int((Sandsara.getCurrentModule() - module)/EVERY_MILIMITERS) * 2*PI;
     Sandsara.setThetaCurrent(Sandsara.getCurrentAngle() + degreesToRotate);
     lastPoint = true;
+
     movePolarTo(module, angle, 0, true);
     lastPoint = false;
 }
@@ -1066,6 +1068,7 @@ int movePolarTo(double component_1, double component_2, double couplingAngle, bo
     }
     deltaTheta = (thetaNext - thetaCurrent) / slices;
     deltaZ = (zNext - zCurrent) / slices;
+    
     for (long i = 0; i < slices; i++)
     {
         if (speedChangedMain){

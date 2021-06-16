@@ -23,7 +23,7 @@ int SdFiles::DISTANCIA_MAX = MAX_RADIO;
  */
 SdFiles::SdFiles(String nameF, int directionMode)
 {
-    //DISTANCIA_MAX = MAX_RADIO;
+    DISTANCIA_MAX = MAX_RADIO;
     fileName = nameF;
     fileType = getType(fileName);
     this->directionMode = directionMode;

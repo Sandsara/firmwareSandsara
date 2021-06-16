@@ -42,6 +42,8 @@ Motors::Motors()
 {
     this->microstepping = MICROSTEPPING;
     degrees_per_step = (littlePulleySize / bigPulleySize) * (PI / 180.0) * (1.8 / microstepping);
+    Serial.print("microstepping");
+    Serial.println(microstepping);
     stepper1 = AccelStepper(1, STEP_PIN, DIR_PIN);
     stepper2 = AccelStepper(1, STEP_PIN2, DIR_PIN2);
     stepper1.setPinsInverted(true);
@@ -96,6 +98,7 @@ void Motors::moveTo(double x, double y, bool littleMovement)
         ik(x, y, &q1, &q2);
         steps_of_q1 = calculate_steps(q1_current, q1);
         steps_of_q2 = calculate_steps(q2_current, q2);
+
         if (!(steps_of_q1 == 0 && steps_of_q2 == 0))// || littleMovement)
         { 
 #ifdef IMPLEMENT_ACCELERATION
@@ -627,6 +630,10 @@ void Motors::setRealSpeed2(double speed2){
 void Motors::init(double xInit, double yInit)
 {
     double q1, q2;
+    //this 2 lines was added because microstepping, littlePulleySize and bigPulleySize need to be initialized
+    this->microstepping = MICROSTEPPING;
+    degrees_per_step = (littlePulleySize / bigPulleySize) * (PI / 180.0) * (1.8 / microstepping);
+
     stepper1.setMaxSpeed(50 * microstepping);
     stepper2.setMaxSpeed(50 * microstepping);
     stepper1.setCurrentPosition(0);
