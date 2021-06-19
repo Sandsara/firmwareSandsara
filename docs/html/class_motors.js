@@ -25,6 +25,7 @@ var class_motors =
     [ "_pathSpeed", "class_motors.html#a91aa715064e4e77e91576ecc7b551eff", null ],
     [ "couplingAngle", "class_motors.html#a2cede926703e2a524aff84a2906c1655", null ],
     [ "degrees_per_step", "class_motors.html#a0b6d627a75006ddbdea04e7d199d55fe", null ],
+    [ "lastPoint", "class_motors.html#a08b64aada64da5b0f47315d416426272", null ],
     [ "microstepping", "class_motors.html#a8d3dc3c18bb6ac3f73fada783ff81b08", null ],
     [ "millimeterSpeed", "class_motors.html#a8bd2709fce43b90ee9e9003e92fa2b23", null ],
     [ "q1_current", "class_motors.html#a40af256194f400ed5db9cbc9fd521cdf", null ],

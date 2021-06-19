@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['safe_5fspeed',['SAFE_SPEED',['../config_8h.html#a92862453ec70e8842ed8eabbe3b877a0',1,'config.h']]],
+  ['samples',['SAMPLES',['../config_8h.html#ad0c329adebc27917fc0a4f51079acf6a',1,'config.h']]],
+  ['sd_5fcs_5fpin',['SD_CS_PIN',['../config_8h.html#a04d57a6c18b2d5e81f31093e58ed0c62',1,'config.h']]],
+  ['serial_5fport',['SERIAL_PORT',['../config_8h.html#ac08f8f916661bb5fc606373bea93d274',1,'config.h']]],
+  ['serial_5fport2',['SERIAL_PORT2',['../config_8h.html#ad4558285a79d6871202fe922ae22737c',1,'config.h']]],
+  ['service_5fuuid1',['SERVICE_UUID1',['../_bluetooth_8h.html#a7d9f1519aac364e9d383bcd970830d78',1,'Bluetooth.h']]],
+  ['service_5fuuid2',['SERVICE_UUID2',['../_bluetooth_8h.html#ac613aee025d1881f084c577e10457ec0',1,'Bluetooth.h']]],
+  ['service_5fuuid3',['SERVICE_UUID3',['../_bluetooth_8h.html#abe8209b79ef8a207161cd72bb7cea4c5',1,'Bluetooth.h']]],
+  ['service_5fuuid4',['SERVICE_UUID4',['../_bluetooth_8h.html#a8def3e17fbcbcd998ad8d106106ce2fc',1,'Bluetooth.h']]],
+  ['service_5fuuid5',['SERVICE_UUID5',['../_bluetooth_8h.html#a2fb41e2a8319471f0e05cf932a57114a',1,'Bluetooth.h']]],
+  ['service_5fuuid6',['SERVICE_UUID6',['../_bluetooth_8h.html#ab372e48191684fe681260b9f62d686ac',1,'Bluetooth.h']]],
+  ['speed_5fmotor_5fdefault',['SPEED_MOTOR_DEFAULT',['../config_8h.html#a0bf71fff0086bc159dfa0f090d48313b',1,'config.h']]],
+  ['speed_5fwhen_5fis_5fconnected_5fto_5fble',['SPEED_WHEN_IS_CONNECTED_TO_BLE',['../config_8h.html#a56238f6187543ef6a0343aba5faa5fa0',1,'config.h']]],
+  ['spi_5fspeed_5fto_5fsd',['SPI_SPEED_TO_SD',['../config_8h.html#a48b425d3a09d859264ffa87e345a1d11',1,'config.h']]],
+  ['stall_5fvalue',['STALL_VALUE',['../config_8h.html#a933345976804112fc64ce31deeaac5da',1,'config.h']]],
+  ['stall_5fvalue2',['STALL_VALUE2',['../config_8h.html#a34b13b8ba70f064b8fadcf314d8680c0',1,'config.h']]],
+  ['step_5fpin',['STEP_PIN',['../config_8h.html#a5f02e9e869444ace8e8f395b22a5e893',1,'config.h']]],
+  ['step_5fpin2',['STEP_PIN2',['../config_8h.html#adb90e1d1afab25ce473bad9830a35497',1,'config.h']]]
+];

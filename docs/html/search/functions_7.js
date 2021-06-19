@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['readbt_102',['readBt',['../class_bluetooth.html#a312982e4fd20b0ca544d060fe06115b4',1,'Bluetooth']]],
-  ['readline_103',['readLine',['../class_bluetooth.html#a7ea03128eedbb3edcbebdf9b0f15395e',1,'Bluetooth']]],
-  ['resetspeeds_104',['resetSpeeds',['../class_motors.html#a7c611b585454635240f9f21a76902424',1,'Motors']]],
-  ['rotate_105',['rotate',['../class_motors.html#a5d4e72cba3141c3c5622651206cf0557',1,'Motors']]]
+  ['info_5fmotor1',['info_motor1',['../_testing_8cpp.html#ae8eedc46eb9ab29b84ee5670e997d7b0',1,'Testing.cpp']]],
+  ['info_5fmotor2',['info_motor2',['../_testing_8cpp.html#ae3e362f6cd1b59e5fdb2b6baf1cd313f',1,'Testing.cpp']]],
+  ['init',['init',['../class_bluetooth.html#a2d67a646b9ea600eced74a14ff7c6683',1,'Bluetooth::init()'],['../class_motors.html#a5bf25c15446fa6e01985eb09e9aa4bed',1,'Motors::init()']]],
+  ['isvalid',['isValid',['../class_sd_files.html#a68421737702710218d25eb77ca75d914',1,'SdFiles']]]
 ];

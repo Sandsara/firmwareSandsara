@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['t0',['t0',['../_testing_8cpp.html#a7bb1ec7dd618711e249eb99af044e53a',1,'Testing.cpp']]],
+  ['t1',['t1',['../_testing_8cpp.html#a3d71a2586b8b2c5af3d449e94fea643b',1,'Testing.cpp']]],
+  ['task1',['Task1',['../main_8cpp.html#aa8a74d99e32c031fea96c5a186b717ae',1,'main.cpp']]],
+  ['task2',['Task2',['../main_8cpp.html#a404db725517988414a2995b29785fdb6',1,'main.cpp']]],
+  ['task3',['Task3',['../_testing_8cpp.html#a9c0905e2c9ae76d4154dae9bb1357b17',1,'Testing.cpp']]],
+  ['task3code',['Task3code',['../_testing_8cpp.html#adaa7804de9e20c834baac70e967ccb20',1,'Testing.cpp']]],
+  ['test',['Test',['../class_testing.html#a96d0233a7a8ef99c9c9e170f7c7f3dde',1,'Testing']]],
+  ['testing',['Testing',['../class_testing.html',1,'Testing'],['../_testing_8cpp.html#a44d6e6325bc6412e3a551c1a36dfea52',1,'Testing(void):&#160;Testing.cpp']]],
+  ['testing_2ecpp',['Testing.cpp',['../_testing_8cpp.html',1,'']]],
+  ['testing_2eh',['Testing.h',['../_testing_8h.html',1,'']]],
+  ['testingplaylist',['TESTINGPLAYLIST',['../config_8h.html#a7d81281c60a3b24206b17c1935e80c3a',1,'config.h']]],
+  ['thetapolar',['thetaPolar',['../class_motors.html#a6760021c3006e83ddaa031dbe811dcbc',1,'Motors']]],
+  ['thread_5fleds_5ftime',['THREAD_LEDS_TIME',['../config_8h.html#af6bcd50ad2aca4a91bf7bbc7417f021b',1,'config.h']]],
+  ['time_5fwaitforsd',['TIME_WAITFORSD',['../config_8h.html#a38fdd8ec9f4c6f1c2446a0218c2e6f3e',1,'config.h']]],
+  ['timeleds',['timeLeds',['../main_8cpp.html#a86bbf8ebc718d0e9c58090d4e20ae693',1,'main.cpp']]],
+  ['timemotor',['timeMotor',['../_motors_8cpp.html#a2170a9f8ec17feb3b138a4c137e3a2d4',1,'Motors.cpp']]],
+  ['timer1',['timer1',['../_working_area_8cpp.html#a7ad5e76ed7529e20eb793489fe2adfb6',1,'WorkingArea.cpp']]],
+  ['times',['times',['../main_8cpp.html#a4579e0715eb4e2b52b27b3231a109a88',1,'main.cpp']]],
+  ['tmcmotora',['tmcMotorA',['../main_8cpp.html#a89ca3f100ff9237bda6fdf867cbd657e',1,'tmcMotorA():&#160;main.cpp'],['../_testing_8cpp.html#a89ca3f100ff9237bda6fdf867cbd657e',1,'tmcMotorA():&#160;Testing.cpp']]],
+  ['tmcmotorb',['tmcMotorB',['../main_8cpp.html#aa3c26417a024522b28d73fbd59d64b30',1,'tmcMotorB():&#160;main.cpp'],['../_testing_8cpp.html#aa3c26417a024522b28d73fbd59d64b30',1,'tmcMotorB():&#160;Testing.cpp']]],
+  ['turnonleds',['turnOnLeds',['../main_8cpp.html#ac5520b28a0f0a0dfefc95d21c7df6b88',1,'main.cpp']]]
+];

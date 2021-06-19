@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['cerozone_5fno_5fperformed',['CEROZONE_NO_PERFORMED',['../config_8h.html#a25c1acb0785d9082366d9ca1e004dd98',1,'config.h']]],
+  ['cerozone_5fperformed',['CEROZONE_PERFORMED',['../config_8h.html#a19beba98a81fb208970ca1ffed84ffba',1,'config.h']]],
+  ['characteristic_5fuuid_5famountcolors',['CHARACTERISTIC_UUID_AMOUNTCOLORS',['../_bluetooth_8h.html#a850bfaef142a83cf5ddf6fa6a1c8fba4',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fblue',['CHARACTERISTIC_UUID_BLUE',['../_bluetooth_8h.html#afad139d311e7b75b1b280137be1fbc4a',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fbrightness',['CHARACTERISTIC_UUID_BRIGHTNESS',['../_bluetooth_8h.html#a9723312ed5021b15cad901e8a4cdf1f9',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fcyclemode',['CHARACTERISTIC_UUID_CYCLEMODE',['../_bluetooth_8h.html#a594138c013711abfb43597185959c5e9',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fdirection',['CHARACTERISTIC_UUID_DIRECTION',['../_bluetooth_8h.html#a1edda7d08463c37b663739a46773c545',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fgreen',['CHARACTERISTIC_UUID_GREEN',['../_bluetooth_8h.html#a87c8ab07a7a45588c6b0b6ccba2b943b',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fledspeed',['CHARACTERISTIC_UUID_LEDSPEED',['../_bluetooth_8h.html#a8c3f2acba52c6dbfef58ce7999e2ae3c',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fmsgerrorleds',['CHARACTERISTIC_UUID_MSGERRORLEDS',['../_bluetooth_8h.html#abdc6cb1d446131be4baf43d21ff363d1',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fpositions',['CHARACTERISTIC_UUID_POSITIONS',['../_bluetooth_8h.html#afc006e9ed5ac1a1d0432159e05ed6ade',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fred',['CHARACTERISTIC_UUID_RED',['../_bluetooth_8h.html#a8b60211f55f9340469b1bfe0c1762174',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fselectedpalette',['CHARACTERISTIC_UUID_SELECTEDPALETTE',['../_bluetooth_8h.html#af680492fc816db21b798ae9462179ec2',1,'Bluetooth.h']]],
+  ['characteristic_5fuuid_5fupdatecpalette',['CHARACTERISTIC_UUID_UPDATECPALETTE',['../_bluetooth_8h.html#a195a61866cf13cd89eb22010d48a5378',1,'Bluetooth.h']]],
+  ['chunksize',['CHUNKSIZE',['../config_8h.html#a239bebe1697b474e6f84945e9fb9faee',1,'config.h']]],
+  ['code_5fcalibrating_5fpallete',['CODE_CALIBRATING_PALLETE',['../config_8h.html#ada46e8a5825c22d2625155835113b4f6',1,'config.h']]],
+  ['code_5fnosd_5fpallete',['CODE_NOSD_PALLETE',['../config_8h.html#abd1ec5fac3cc3d3a8652911d48a08d13',1,'config.h']]],
+  ['code_5fsdempty_5fpallete',['CODE_SDEMPTY_PALLETE',['../config_8h.html#ad094945a60e60db05273174a73b880ff',1,'config.h']]],
+  ['code_5fupdating_5fpallete',['CODE_UPDATING_PALLETE',['../config_8h.html#aca77871bc55b49af6ecfb2c122740c7e',1,'config.h']]],
+  ['color_5forder',['COLOR_ORDER',['../main_8cpp.html#a00c9e5e8fdc981fc21a1e82e722980b2',1,'main.cpp']]]
+];

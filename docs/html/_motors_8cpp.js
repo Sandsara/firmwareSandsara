@@ -1,0 +1,27 @@
+var _motors_8cpp =
+[
+    [ "dkX", "_motors_8cpp.html#a9610dbc4dcb40b4a1c0282d3e7a662d1", null ],
+    [ "dkY", "_motors_8cpp.html#a0155b8920bb8c7c1e5f79ce0021f0348", null ],
+    [ "greaterValue", "_motors_8cpp.html#a0969c67fba16d5be56c177f6ebb3cf8f", null ],
+    [ "romGetSpeedMotor", "_motors_8cpp.html#a94533b9980f81dcf5ee9542404eb8022", null ],
+    [ "b", "_motors_8cpp.html#a9148c21e61b3deadffd215454f11b940", null ],
+    [ "bigPulleySize", "_motors_8cpp.html#a0ec1bbb16b091b56b9a60ecbac02c8b4", null ],
+    [ "distanceGlobal", "_motors_8cpp.html#ac18ea241f87d448bfb2dbd53c21d9826", null ],
+    [ "l1", "_motors_8cpp.html#a2ed9c5f94241ea5bf6091b9ac57106fe", null ],
+    [ "l2", "_motors_8cpp.html#a7b1abffe93e6a3309357f2503c9ac5f1", null ],
+    [ "littlePulleySize", "_motors_8cpp.html#a6c02c80312e9990bcd8b405806334ffa", null ],
+    [ "m", "_motors_8cpp.html#a5ecd47705e452966434266af70997af2", null ],
+    [ "MAX_CHARACTER_PER_LINE", "_motors_8cpp.html#a647d0157a59de589af8b0af3ec3761e2", null ],
+    [ "MAX_STEPS_PER_SECOND", "_motors_8cpp.html#a3bf5b5dbdeb75f92b762f4526ac1648c", null ],
+    [ "motorsTask", "_motors_8cpp.html#aadb0d8c08d8eb3b777410bb7e72a8a90", null ],
+    [ "pauseModeGlobal", "_motors_8cpp.html#a0cd5e077839e86e5404b2f83eb628141", null ],
+    [ "productType", "_motors_8cpp.html#aef5ec5cfb2cd92d12a8cc78877af82f3", null ],
+    [ "q1DirectionNew", "_motors_8cpp.html#af4e238ab1b4ecb4c73efbee7d632d468", null ],
+    [ "q1DirectionOld", "_motors_8cpp.html#a766482decbd6d291f43127a190fed7c6", null ],
+    [ "q1StepsGlobal", "_motors_8cpp.html#abcafda67c7512475cf2c099ed99d1036", null ],
+    [ "q2DirectionNew", "_motors_8cpp.html#a40a4dbb7566a91158ea6af828872ada5", null ],
+    [ "q2DirectionOld", "_motors_8cpp.html#a4ea416e8092bca8bb6188b4f5941d969", null ],
+    [ "q2StepsGlobal", "_motors_8cpp.html#aa5a511db780dd575de0bfd745cc58a99", null ],
+    [ "startMovement", "_motors_8cpp.html#a792cb7ddb9306e05bb6d0d2bffe67732", null ],
+    [ "timeMotor", "_motors_8cpp.html#a2170a9f8ec17feb3b138a4c137e3a2d4", null ]
+];

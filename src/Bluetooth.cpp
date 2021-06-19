@@ -218,6 +218,25 @@ class bleServerCallback : public BLEServerCallbacks
     }
 };
 
+/**
+ * @brief **[BLE Command]** This function is called when you write or read the ledSpeed characteristic
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 1a9a7b7e-2305-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you can write this characteristic to set the speed of the LEDs. In the same way, you can read it to know the speed of the LEDs
+ * 
+ * **Range:**  
+ * accepted values go from 1 to 100, where 1 is the slowest speed and 100 is the fastest speed.
+ * 
+ * @note when you write to this characteristic you will be notified by the ledCharacteristic_errorMsg with some of these values:
+ * - "ok" means the value was set successfully.
+ * - "error = -70" the values is out of range.
+ */
 class speedLedCallbacks : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -253,6 +272,31 @@ class speedLedCallbacks : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This function is called when you write or read the cycleMode characteristic
+ * 
+ * the cycle mode is used to control the sequence of the LEDs and there is 2 mode, cycle and solid.  
+ * - **cycle mode** means that the LED strip will show all the colors from the selected palette at the same tame.  
+ * - **solid mode** means that the LED strip will set a same color choosed from the selected palette for all the LEDs in the LED strip.  
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 1a9a7dea-2305-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you can write to this characteristic to set the cycle mode. In the same way, you can read it to know the cycle mode
+ * 
+ * **Range:**  
+ * accepted values are 0 or any other diffeent than 0.
+ * - 0 to set cycle mode.
+ * - any other number to set solid mode.  
+ * 
+ * @note when you write to this characteristic you will be notified by the ledCharacteristic_errorMsg with some of these values:
+ * - "ok" means the value was set successfully.
+ * - "error = -70" the values is out of range.
+ */
 class cycleModeCallbacks : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -287,6 +331,28 @@ class cycleModeCallbacks : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the ledDirection characteristic.
+ * 
+ * the led strip has 2 directions, clock wise and counter clockwise, you can choose one changing the characteristic.
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 1a9a8042-2305-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you can write to this characteristic to set direction of the led strip, or in the same way you can read it to know it.
+ * 
+ * **Range:**  
+ * accepted values are 0 or any other diffeent than 0.
+ * - 1 for clockwise direction.
+ * - 0 for counter clockwise direction.  
+ * 
+ * @note when you write to this characteristic you will be notified by the ledCharacteristic_errorMsg with some of these values:
+ * - "ok" means the value was set successfully.
+ */
 class directionCallbacks : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -329,6 +395,30 @@ class directionCallbacks : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the ledBrightness characteristic.
+ * 
+ * you can change the brightness of the ledsrip just modifying this characteristic.
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 1a9a8948-2305-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you have to write to this characteristic the percentage of the desired brightness or you can read it to know it.
+ * 
+ * **Range:**  
+ * - the brightness characteristic accepts values between 0 and 100. 
+ * 
+ * **posible reponses:**
+ * - "ok" the desired brightness was set.
+ * - "error= -1" the brightness is our of range.
+ * 
+ * @note when you write to this characteristic you will be notified by the ledErrorMsg characteristic with the response.
+ * @see 
+ */
 class setBrightnessCallbacks : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -368,6 +458,17 @@ class setBrightnessCallbacks : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the selectedPalette characteristic.
+ * 
+ * **this chacteristic isdeprecated**  
+ * this characteristic used to be used to change between different preset palettes hardcoded, but this charateristic is deprecated because
+ * it is posible we delete the hardcoded palettes.
+ * 
+ * **range: **  
+ * "0" to "15" to select a preset palette.  
+ * "16" to select the custom palette.
+ */
 class selectedPaletteCallbacks : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -406,6 +507,45 @@ class selectedPaletteCallbacks : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This function is called when you write the UpdatePalette characteristic
+ * 
+ * You can define a custom palette to be shown in the led strip and you only need to send the “main colors” of the palette
+ * ( as low as 2 and up to 16) which Sandsara internally interpolates to a 256 color gradient.
+ * 
+ * Properties:  
+ * - Write
+ * 
+ * **UUID: 1a9a87b8-2305-11eb-adc1-0242ac120002**
+ * 
+ * Usage:  
+ * To define the custom palette, your need the next information: Amount of Colors, Positions, Red, Green and Blue.
+ * only write to this characteristic the amount of colors, positions, reds, greens and blues values. **Every value must be a Byte**.
+ * 
+ * Range:  
+ * - amount of colors: goes from 2 to 16.  
+ * - positions: every position goes from 0 to 255.  
+ * - reds: every red value goes from 0 to 255.  
+ * - greens: every green value goes from 0 to 255.  
+ * - blues: every blue value goes from 0 to 255.  
+ * 
+ * In this image you can see more clearly how to send a palette.
+ * \image html updatePaletteExample.png
+ * 
+ * posible reponses:
+ * - "ok" the custom palette was updated successfully.
+ * - "error= -1" there is no data to update.
+ * - "error= -2 the number of colors is out of range"
+ * - "error= -3 the data is incompleted"  
+ * 
+ * if you want to know what is the current palette you need to read the next characteristics
+ * - amount of colors characteristic (UUID: 1a9a820e-2305-11eb-adc1-0242ac120002)
+ * - positions characteristic (UUID: 1a9a82d6-2305-11eb-adc1-0242ac120002)
+ * - red characteristic (UUID: 1a9a83a8-2305-11eb-adc1-0242ac120002)
+ * - green characteristic (UUID: 1a9a8466-2305-11eb-adc1-0242ac120002)
+ * - blue characteristic (UUID: 1a9a852e-2305-11eb-adc1-0242ac120002)
+ * @note when you write to this characteristic you will be notified by the ledErrorMsg characteristic with the response.
+ */
 class CallbacksToUpdate : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -595,6 +735,46 @@ class genericCallbacks : public BLECharacteristicCallbacks
 
 //====================callbacks for playlist config==============================================
 //==========================================================================================================
+
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write or read the playlistName characteristic.
+ * 
+ * Sandsara is always playing back a playlist that contains a certain paths. This characteristic is used to know or change the current playlist.
+ * all the playlist are store in a text file but with .playlist extension and this contains the file name of the path to be reproduced.
+ * For example, a generic playlist file will looks like this:  
+ * ~~~
+ * path1.txt
+ * path2.txt
+ * path3.txt
+ * path4.txt
+ * ~~~
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 9b12a048-2c6e-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you can write to this characteristic to change to a playlist, or in the same way you can read it to know the current playlist.
+ * To change a playlist just write to the this characteristic the name of the playlist you want to playback (ignoring its extension, 
+ * for example, if you want to change to “geometry.playlist” just write “geometry”).
+ * Be sure you have sent the playlist to Sandsara before or make sure it already exists in the SD card.
+ * 
+ * 
+ * **Range:**  
+ * accepted values are 0 or any other diffeent than 0.
+ * - 1 for clockwise direction.
+ * - 0 for counter clockwise direction.  
+ * 
+ * **responses: **  
+ * - "ok" means the playlist was changed successfully.
+ * - "-1" means the playlist you try to change does not exist.
+ * 
+ * @note when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteritic for a response.
+ * 
+ * @see How to send a file? --> FilesCallbacks_receive
+ */
 class playlistCallbacks_name : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -636,6 +816,38 @@ class playlistCallbacks_name : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write or read the pathName characteristic.
+ * 
+ * all the paths has and unique name and the sandsara tracks are name starting with "Sandsara-trackNumber-", for example, "Sandsara-trackNumber-0001.thr".
+ * you can change or know the current path with this characteristic.
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 9b12a534-2c6e-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you can write to this characteristic to change the current path, or in the same way you can read it to know it.
+ * 
+ * **Range:**  
+ * accepted values are any name, for example "my track.thr", "path x.txt", etc.
+ * 
+ * **responses: **  
+ * - "ok" means the path was changed successfully.
+ * - "-1" means the playlist you try to change does not exist.
+ * 
+ * this characteristic is used to "test" a path, this is the behavior whe you change a path using this characteristic.
+ * 1. sandsara is playing the Geometries playlist and it is playing the 15 postion track.
+ * 2. you change to "my track.txt" using this characteristic.
+ * 3. sandara will play "my track.txt"
+ * 4. when it finish, sandsara will go back to 15 positon track of the Geometries playlist.
+ * 
+ * @note when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteritic for a response.
+ * @warning we recomment to use playlistCallbacks_pathPosition to change a path.
+ * @see How to send a file? --> FilesCallbacks_receive
+ */
 class playlistCallbacks_pathName : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -680,6 +892,37 @@ class playlistCallbacks_pathName : public BLECharacteristicCallbacks
     #endif
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write or read the pathPosition characteristic.
+ * 
+ * Sandsara always are playing a playlist and every path has an index starting at 1, you can change the current path by its index in the playlist.
+ * 
+ * **Properties:**  
+ * - Write
+ * - Read
+ * 
+ * **UUID: 9b12a62e-2c6e-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * you can change the current path just writing to this characteristic the index of the desied path, or in the same way you can read it to know current path index.
+ * 
+ * 
+ * **Range:**  
+ * accepted values goes from 1 to the number of paths in the current playlist.
+ * 
+ * **Responses:**  
+ * - "ok" means the path was changed successfully.
+ * 
+ * this is the behavior whe you change a path using this characteristic.
+ * 1. sandsara is playing the Geometries playlist and it is playing the 15 postion track.
+ * 2. you change to third position path using this characteristic.
+ * 3. sandara will play the third position path.
+ * 4. when it finish, sandsara will continue with the fourth index path.
+ * 
+ * @note when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteritic for a response.
+ * @warning make sure to change to a valid index
+ * @see How to send a file? --> FilesCallbacks_receive
+ */
 class playlistCallbacks_pathPosition : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -711,7 +954,9 @@ class playlistCallbacks_pathPosition : public BLECharacteristicCallbacks
     #endif
 };
 
-//esta characteristic sera eliminada
+/**
+ * @brief **[BLE Command]** Deprecated.
+ */
 class playlistCallbacks_addPath : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -754,7 +999,9 @@ class playlistCallbacks_addPath : public BLECharacteristicCallbacks
     #endif
 };
 
-//esta characteristic sera eliminada
+/**
+ * @brief **[BLE Command]** Deprecated.
+ */
 class playlistCallbacks_mode : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -792,6 +1039,36 @@ class playlistCallbacks_mode : public BLECharacteristicCallbacks
 
 //================================Sending files=====================================
 //==================================================================================
+
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the receiveFlag characteristic.
+ * 
+ * receiveFlag characteristic is used to start the transfer of a file from the BLE client to this ESP32.
+ * 
+ * **Properties:**  
+ * - Write
+ * 
+ * **UUID: fcbff68e-2af1-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * in order to transfer a file to this device you need to follow the next steps:
+ * 1. Activate notifications of the FilesCallbacks_send characteristic asociated to this class.
+ * 2. write to this characteristic the name of file you want to transfer.
+ * 3. write to the FilesCallbacks_send the bytes of the file in chunks of 512 bytes.
+ * 4. wait to be notified from theFilesCallbacks_send.
+ * 5. repeat steps 3 and 4 until you have sent all the bytes of the file
+ * 6. write to this characteristic any message to finish the transfer
+ * 7. you will be notify by FileErrorMsg characteristic with "done"
+ * 
+ * **Range:**  
+ * accepted values are a name, for example, "New Path.thr" to start the transmition of a file and any other character to finish it.  
+ * 
+ * @note you may will be notified by fileErrorMsg characteristic with some of this massage:
+ * - "ok" means the file was created and is waiting for the bytes of the file.
+ * - "error= -2" means the file couldn't be created maybe because there is no sd card inserted.
+ * @warning if you try to send a file named equals than other inside the sd card it will be deleted to accept this new file, so if you're
+ * not sure if the name of your file name already exists in the sd card, Use the FilesCallbacks_checkFile characteristic.
+ */
 class FilesCallbacks_receiveFlag : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -863,6 +1140,31 @@ class FilesCallbacks_receiveFlag : public BLECharacteristicCallbacks
     }
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the FileReceive characteristic.
+ * 
+ * receive characteristic is used to receive the bytes of the file you want to transfer.
+ * 
+ * **Properties:**  
+ * - Write
+ * - notify
+ * 
+ * **UUID: fcbffa44-2af1-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * in order to transfer a file to this device you need to follow the next steps:
+ * 1. Activate notifications of this characteristic.
+ * 2. write to FilesCallbacks_receiveFlag the name of file you want to transfer.
+ * 3. write to this characteristic the bytes of the file in chunks of 512 bytes.
+ * 4. wait to be notified from this characteristic.
+ * 5. repeat steps 3 and 4 until you have sent all the bytes of the file
+ * 6. write to FilesCallbacks_receiveFlag characteristic any message to finish the transfer
+ * 7. you will be notify by FileErrorMsg characteristic with "done"
+ * 
+ * **Range:**  
+ * accepted values are a string of bytes of no more than 512 bytes length  
+ * 
+ */
 class FilesCallbacks_receive : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -894,6 +1196,31 @@ class FilesCallbacks_receive : public BLECharacteristicCallbacks
     }
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the sendFlag characteristic.
+ * 
+ * sendFlag characteristic is used to start the transfer of a file from the SD card to the BLE Client.
+ * 
+ * **Properties:**  
+ * - Write
+ * 
+ * **UUID: fcbffdaa-2af1-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * to read a file from the SD card you have to read chunks of bytes corresponding to the desired file, to do it  follow the next steps.
+ * 1. write to this characteristic the name of the file you want to read.
+ * 2. wait to be notified by the fileErrorMsg characteristic and read it (see below what response you can receive).
+ * 3. read the FilesCallbacks_send characteristic to get the bytes of the desired file.
+ * 4. repeat step 3 until you read less than 512 bytes. when you read less than 512 bytes means that you have read all the bytes of the file.
+ * 
+ * 
+ * **Range:**  
+ * accepted values are a name, for example, "Old Path.txt" to start the transmition of this file.  
+ * 
+ * @note you may will be notified by fileErrorMsg characteristic with some of this massage:
+ * - "ok" means the file is ready to be read.
+ * - "error= -1" the desired file does not exist.
+ */
 class FilesCallbacks_sendFlag : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -956,6 +1283,28 @@ class FilesCallbacks_sendFlag : public BLECharacteristicCallbacks
     }
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write the sendFlag characteristic.
+ * 
+ * sendFlag characteristic is used to start the transfer of a file from the SD card to the BLE Client.
+ * 
+ * **Properties:**  
+ * - Write
+ * - notify
+ * 
+ * **UUID: fcbffe72-2af1-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * to read a file from the SD card you have to read chunks of bytes corresponding to the desired file, to do it  follow the next steps.
+ * 1. write to FilesCallbacks_sendFlag characteristic the name of the file you want to read.
+ * 2. wait to be notified by the fileErrorMsg characteristic and read it.
+ * 3. read this characteristic to get the bytes of the desired file.
+ * 4. repeat step 3 until you read less than 512 bytes. when you read less than 512 bytes means that you have read all the bytes of the file.
+ * 
+ * 
+ * **Range:**  
+ * accepted values are a name, for example, "Old Path.txt" to start the transmition of this file.  
+ */
 class FilesCallbacks_send : public BLECharacteristicCallbacks
 {
     void onRead(BLECharacteristic *characteristic)
@@ -991,6 +1340,36 @@ class FilesCallbacks_send : public BLECharacteristicCallbacks
 
 };
 
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write to the checkFile characteristic.
+ * 
+ * checkFile characteristic is used to check if a file exists in the sd card.
+ * 
+ * **Properties:**  
+ * - Write
+ * 
+ * **UUID: fcbffb52-2af1-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * if you want to check if a file exists in the SD card just write to this characteritic the file name you want to check and wait to be notified by fileErroMsg (fcbffce2-2af1-11eb-adc1-0242ac120002).
+ * to know if the file exists read fileErroMsg characteristic and if the response is 1 the file exists and if it is 0 file doesn’t exist.
+ * 
+ * **Range:**  
+ * accepted values are a name, for example, "Old Path.txt", "dogs.txt", "geometries.playlist" and so on.
+ * 
+ * **Response: **  
+ * you can receive one of these responses after you write to this characteristic.
+ * - "0" means the file does NOT exists
+ * - "1" means the file exists*.  
+ * 
+ * 
+ * @note all the reponses has to be read from the fileErroMsg characteristic after being notified by it.
+ * @warning * if the file name starts with "Sandsara-trackNumber-" you will receive "1" even if your exact file name
+ * does not exists in the sd card but it exists with another extension, for example, if in the sd card exists the file called "Sandsara-trackNumber-011.txt"
+ * and you ask for "Sandsara-trackNumber-011.bin" you will receive "1" as a response even if "Sandsara-trackNumber-011.bin" does no exists,
+ * but "Sandsara-trackNumber-011.txt" does.
+ * 
+ */
 class FilesCallbacks_checkFile : public BLECharacteristicCallbacks
 {
     void onWrite(BLECharacteristic *characteristic)
@@ -1066,8 +1445,32 @@ class FilesCallbacks_checkFile : public BLECharacteristicCallbacks
     #endif
 };
 
-class FilesCallbacks_deleteFile : public BLECharacteristicCallbacks
-{
+/**
+ * @brief **[BLE Command]** This class is used to create and object to be called when you write to the deleteFile characteristic.
+ * 
+ * deleteFile characteristic is used to delete a file in the sd card.
+ * 
+ * **Properties:**  
+ * - Write
+ * 
+ * **UUID: fcbffc24-2af1-11eb-adc1-0242ac120002**
+ * 
+ * **Usage:**  
+ * if you want to delete a file in the SD card just write to this characteritic the file name you want to delete.
+ * to verify if the file was deleted read the fileErrorMsg characteristic for the response.
+ * 
+ * **Range:**  
+ * accepted values are a name, for example, "Old Path.txt", "dogs.txt", "geometries.playlist" and so on.
+ * 
+ * **Response: **  
+ * you can receive one of these responses after you write to this characteristic.
+ * - "0" means the file does NOT exists
+ * - "1" means the file was deleted.  
+ * 
+ * 
+ * @note all the reponses has to be read from the fileErroMsg characteristic after being notified by it.
+ */
+class FilesCallbacks_deleteFile : public BLECharacteristicCallbacks {
     void onWrite(BLECharacteristic *characteristic)
     {
         std::string rxData = characteristic->getValue();
@@ -1103,6 +1506,7 @@ class FilesCallbacks_deleteFile : public BLECharacteristicCallbacks
 
 //===========================Callbacks for general config==========================
 //=================================================================================
+
 
 class generalCallbacks_name : public BLECharacteristicCallbacks
 {

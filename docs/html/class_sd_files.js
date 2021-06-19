@@ -5,7 +5,7 @@ var class_sd_files =
     [ "autoSetMode", "class_sd_files.html#a99ab0e93c290b39f68c3d3296d8fc4e2", null ],
     [ "getFinalAngle", "class_sd_files.html#aa729a7b4a376d54d16526d481fd2667a", null ],
     [ "getFinalPoint", "class_sd_files.html#a3f7b5306f227bc828a0cc9e990ebb064", null ],
-    [ "getNextComponents", "class_sd_files.html#a5a1abe2ca77b476ec9c991956bf78c59", null ],
+    [ "getNextComponents", "class_sd_files.html#ae2d5064b222a1b00778c011adc8c8638", null ],
     [ "getStartAngle", "class_sd_files.html#a20f86c949c346665a00674e5e807b4da", null ],
     [ "getStartModule", "class_sd_files.html#aff571c8728dc30226bdf258543040687", null ],
     [ "getStartPoint", "class_sd_files.html#ad9319527571d9dab8647a554c5497674", null ],

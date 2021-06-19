@@ -1,4 +1,24 @@
 var searchData=
 [
-  ['position_101',['position',['../class_motors.html#aa92d3a59c59ac8c1fb2125ea4b745255',1,'Motors']]]
+  ['getcurrentangle',['getCurrentAngle',['../class_motors.html#a152e1ecd35dcda8747b49189582fe245',1,'Motors']]],
+  ['getcurrentmodule',['getCurrentModule',['../class_motors.html#ad5a040616f1c428a839b1cc03495295d',1,'Motors']]],
+  ['getfinalangle',['getFinalAngle',['../class_sd_files.html#aa729a7b4a376d54d16526d481fd2667a',1,'SdFiles']]],
+  ['getfinalpoint',['getFinalPoint',['../class_sd_files.html#a3f7b5306f227bc828a0cc9e990ebb064',1,'SdFiles']]],
+  ['getlinenumber',['getLineNumber',['../class_sd_files.html#a0c78017fe78e10079e1337d28302f68f',1,'SdFiles']]],
+  ['getmd5string',['GetMD5String',['../_bluetooth_8cpp.html#a2c63cf266a1f100ff744d30bfcd982da',1,'Bluetooth.cpp']]],
+  ['getnextcomponents',['getNextComponents',['../class_sd_files.html#ae2d5064b222a1b00778c011adc8c8638',1,'SdFiles']]],
+  ['getrealq1',['getRealQ1',['../class_motors.html#abc856656f13dd05e5602084d3d7811d6',1,'Motors']]],
+  ['getrealq2',['getRealQ2',['../class_motors.html#a9330d58004c467bd4a9f3f9087a3510f',1,'Motors']]],
+  ['getspeed',['getSpeed',['../class_motors.html#a85230d97cfd7045277f2352f9673f4d7',1,'Motors']]],
+  ['getstartangle',['getStartAngle',['../class_sd_files.html#a20f86c949c346665a00674e5e807b4da',1,'SdFiles']]],
+  ['getstartmodule',['getStartModule',['../class_sd_files.html#aff571c8728dc30226bdf258543040687',1,'SdFiles']]],
+  ['getstartpoint',['getStartPoint',['../class_sd_files.html#ad9319527571d9dab8647a554c5497674',1,'SdFiles']]],
+  ['getstatus',['getStatus',['../class_sd_files.html#aca6f70ed3c3dc8ab34b53cca6d561eaf',1,'SdFiles']]],
+  ['getthetacurrent',['getThetaCurrent',['../class_motors.html#ab54236c39a16cd7537870255548f5511',1,'Motors']]],
+  ['gettype',['getType',['../class_sd_files.html#acfa46dfdce595d38e46bc0809f9c0a83',1,'SdFiles']]],
+  ['getzcurrent',['getZCurrent',['../class_motors.html#a874ea14d554cbd35187193ebf7fafff1',1,'Motors']]],
+  ['gocenterspiral',['goCenterSpiral',['../main_8cpp.html#a80c174390efae06f38bf6ecb30a2e4d4',1,'main.cpp']]],
+  ['goedgespiral',['goEdgeSpiral',['../main_8cpp.html#a3ca37ff89e1560968a1f6dbb7218d1bc',1,'main.cpp']]],
+  ['gohomespiral',['goHomeSpiral',['../main_8cpp.html#aeaec8e6d178948382dbdd1b19173be3f',1,'main.cpp']]],
+  ['greatervalue',['greaterValue',['../_motors_8cpp.html#a0969c67fba16d5be56c177f6ebb3cf8f',1,'Motors.cpp']]]
 ];
