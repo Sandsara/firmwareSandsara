@@ -100,13 +100,40 @@ $(document).ready(function(){initNavTree('classgeneral_callbacks__status.html','
 <div class="title">generalCallbacks_status Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalStatus characteristic.  
+ <a href="classgeneral_callbacks__status.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for generalCallbacks_status:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classgeneral_callbacks__status.png" alt=""/>
  </div></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalStatus characteristic. </p>
+<p>Sandsara has 5 status, play, pause, sleep, busy, and calibration status. you can see a little description of each status below. </p><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">status  </th><th class="markdownTableHeadNone">name  </th><th class="markdownTableHeadNone">description   </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">calibrating  </td><td class="markdownTableBodyNone">Sandsara is calibrating   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">running  </td><td class="markdownTableBodyNone">Sandsara is playing a path   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">3  </td><td class="markdownTableBodyNone">pause  </td><td class="markdownTableBodyNone">Sandsara is in pause mode   </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">sleep  </td><td class="markdownTableBodyNone">Sandsara is in sleep mode   </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">5  </td><td class="markdownTableBodyNone">busy  </td><td class="markdownTableBodyNone">Sandsara is working on something   </td></tr>
+</table>
+<p><b>Properties:</b></p>
+<ul>
+<li>Read</li>
+<li>notify</li>
+</ul>
+<p><b>UUID: 7b204660-30c3-11eb-adc1-0242ac120002</b></p>
+<p><b>Usage:</b></p>
+<p>you can know the status of Sandsara reading this characteristic and use it as you need. you even can activate the notifications and you will be notified every time the status changes. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>
 </div><!-- contents -->

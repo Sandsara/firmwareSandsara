@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('class_files_callbacks__receive.html','
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write the FileReceive characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write the FileReceive characteristic.  
  <a href="class_files_callbacks__receive.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FilesCallbacks_receive:</div>
@@ -112,7 +112,7 @@ Inheritance diagram for FilesCallbacks_receive:</div>
   <img src="class_files_callbacks__receive.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write the FileReceive characteristic. </p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write the FileReceive characteristic. </p>
 <p>receive characteristic is used to receive the bytes of the file you want to transfer.</p>
 <p><b>Properties:</b></p>
 <ul>
@@ -123,15 +123,16 @@ Inheritance diagram for FilesCallbacks_receive:</div>
 <p><b>Usage:</b></p>
 <p>in order to transfer a file to this device you need to follow the next steps:</p><ol type="1">
 <li>Activate notifications of this characteristic.</li>
-<li>write to <a class="el" href="class_files_callbacks__receive_flag.html" title="[BLE Command] This class is used to create and object to be called when you write the receiveFlag cha...">FilesCallbacks_receiveFlag</a> the name of file you want to transfer.</li>
+<li>write to <a class="el" href="class_files_callbacks__receive_flag.html" title="[BLE Command] This class is used to create an object to be called when you write the receiveFlag char...">FilesCallbacks_receiveFlag</a> the name of the file you want to transfer.</li>
 <li>write to this characteristic the bytes of the file in chunks of 512 bytes.</li>
 <li>wait to be notified from this characteristic.</li>
 <li>repeat steps 3 and 4 until you have sent all the bytes of the file</li>
-<li>write to <a class="el" href="class_files_callbacks__receive_flag.html" title="[BLE Command] This class is used to create and object to be called when you write the receiveFlag cha...">FilesCallbacks_receiveFlag</a> characteristic any message to finish the transfer</li>
-<li>you will be notify by FileErrorMsg characteristic with "done"</li>
+<li>write to <a class="el" href="class_files_callbacks__receive_flag.html" title="[BLE Command] This class is used to create an object to be called when you write the receiveFlag char...">FilesCallbacks_receiveFlag</a> characteristic any message to finish the transfer</li>
+<li>you will be notified by FileErrorMsg characteristic with "done"</li>
 </ol>
 <p><b>Range:</b></p>
-<p>accepted values are a string of bytes of no more than 512 bytes length </p>
+<p>accepted values are a string of bytes of no more than 512 bytes length</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>

@@ -102,13 +102,36 @@ $(document).ready(function(){initNavTree('classgeneral_callbacks__name.html','')
 <div class="title">generalCallbacks_name Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalName characteristic.  
+ <a href="classgeneral_callbacks__name.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for generalCallbacks_name:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classgeneral_callbacks__name.png" alt=""/>
  </div></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalName characteristic. </p>
+<p>Sandsara has a <a class="el" href="class_bluetooth.html" title="Se encarga de gestionar la comunicacion por bluetooth.">Bluetooth</a> name so you can identify it and you can choose your Sandsara's name.</p>
+<p><b>Properties:</b></p>
+<ul>
+<li>Write</li>
+<li>Read</li>
+</ul>
+<p><b>UUID: 7b204548-30c3-11eb-adc1-0242ac120002</b></p>
+<p><b>Usage:</b></p>
+<p>if you want to change the <a class="el" href="class_bluetooth.html" title="Se encarga de gestionar la comunicacion por bluetooth.">Bluetooth</a> name of your sandsara just write to this characteristic the desired name. And if you want to know the current name just read the characteristic.</p>
+<p><b>Range:</b></p>
+<p>accepted values are a name, for example, "Raul", "living Room", "Maria", etc. The maximum length of the name should be less than 30 characters.</p>
+<p><b>Response:</b></p>
+<p>you can receive one of these responses after you write to this characteristic.</p><ul>
+<li>"ok" means the name was set successfully.</li>
+<li>"-1" the name length is out of range.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>all the responses have to be read from the generalErrorMsg characteristic after being notified by it. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>
 </div><!-- contents -->

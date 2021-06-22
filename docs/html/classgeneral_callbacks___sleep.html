@@ -102,13 +102,36 @@ $(document).ready(function(){initNavTree('classgeneral_callbacks___sleep.html','
 <div class="title">generalCallbacks_Sleep Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalSleep characteristic.  
+ <a href="classgeneral_callbacks___sleep.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for generalCallbacks_Sleep:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classgeneral_callbacks___sleep.png" alt=""/>
  </div></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalSleep characteristic. </p>
+<p>Sandsara has 3 movement modes, play, pause, and sleep modes. You can enter in Sleep mode using this characteristic. Sleep mode means that Sandsara will stop and will go to center or edge position and the led strip will turn off. this means that the current path will be rewind and when you resume sandsara the path will start from the beginning.</p>
+<p><b>Properties:</b></p>
+<ul>
+<li>Write</li>
+</ul>
+<p><b>UUID: 7b204a3e-30c3-11eb-adc1-0242ac120002</b></p>
+<p><b>Usage:</b></p>
+<p>if you want to enter Sandsara in sleep mode just write to this characteristic any character.</p>
+<p><b>Range:</b></p>
+<p>whatever character will be understood as if you want to sleep Sandsara.</p>
+<p><b>Response:</b></p>
+<p>you can receive one of these responses after you write to this characteristic.</p><ul>
+<li>"ok" means Sandsara is in sleep mode.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>all the responses have to be read from the generalErrorMsg characteristic after being notified by it. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>how to know the status of sandsara? --&gt; <a class="el" href="classgeneral_callbacks__status.html" title="[BLE Command] This class is used to create an object to be called when you write to the generalStatus...">generalCallbacks_status</a>. </dd>
+<dd>
+<a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>
 </div><!-- contents -->

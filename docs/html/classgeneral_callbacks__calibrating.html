@@ -102,13 +102,31 @@ $(document).ready(function(){initNavTree('classgeneral_callbacks__calibrating.ht
 <div class="title">generalCallbacks_calibrating Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>[BLE Command]</b> This class is used to create and object to be called when you write to the generalCalibraring characteristic.  
+ <a href="classgeneral_callbacks__calibrating.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for generalCallbacks_calibrating:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classgeneral_callbacks__calibrating.png" alt=""/>
  </div></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write to the generalCalibraring characteristic. </p>
+<p>Sandara can perform a calibration of the robot (finding the robot's home position) every time a path finishes in the center position. to activate or deactivate this feature you need to use this characteristic</p>
+<p><b>Properties:</b></p>
+<ul>
+<li>Write</li>
+<li>Read</li>
+</ul>
+<p><b>UUID: 7b204f84-30c3-11eb-adc1-0242ac120002</b></p>
+<p><b>Usage:</b></p>
+<p>you can activate or deactivate the calibration between programs writing to this characteristic and in the same way you can know if it is activated or deactivated.</p>
+<p><b>Range:</b></p>
+<p>1 to activate calibration between paths. 0 to deactivate calibration between paths.</p>
+<dl class="section note"><dt>Note</dt><dd>the calibrations need to make a little movement of the ball so if you activate the calibration you will see that the ball makes a little path in the center of sandara every time a path ends in the center. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>
 </div><!-- contents -->

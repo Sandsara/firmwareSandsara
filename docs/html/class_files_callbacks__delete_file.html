@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('class_files_callbacks__delete_file.htm
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write to the deleteFile characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the deleteFile characteristic.  
  <a href="class_files_callbacks__delete_file.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FilesCallbacks_deleteFile:</div>
@@ -112,7 +112,7 @@ Inheritance diagram for FilesCallbacks_deleteFile:</div>
   <img src="class_files_callbacks__delete_file.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write to the deleteFile characteristic. </p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the deleteFile characteristic. </p>
 <p>deleteFile characteristic is used to delete a file in the sd card.</p>
 <p><b>Properties:</b></p>
 <ul>
@@ -120,15 +120,16 @@ Inheritance diagram for FilesCallbacks_deleteFile:</div>
 </ul>
 <p><b>UUID: fcbffc24-2af1-11eb-adc1-0242ac120002</b></p>
 <p><b>Usage:</b></p>
-<p>if you want to delete a file in the SD card just write to this characteritic the file name you want to delete. to verify if the file was deleted read the fileErrorMsg characteristic for the response.</p>
+<p>if you want to delete a file in the SD card just write to this characteristic the file name you want to delete. to verify if the file was deleted read the fileErrorMsg characteristic for the response.</p>
 <p><b>Range:</b></p>
 <p>accepted values are a name, for example, "Old Path.txt", "dogs.txt", "geometries.playlist" and so on.</p>
-<p>**Response: **</p>
+<p><b>Response:</b></p>
 <p>you can receive one of these responses after you write to this characteristic.</p><ul>
-<li>"0" means the file does NOT exists</li>
+<li>"0" means the file does NOT exist</li>
 <li>"1" means the file was deleted.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>all the reponses has to be read from the fileErroMsg characteristic after being notified by it. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>all the responses have to be read from the fileErroMsg characteristic after being notified by it. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>

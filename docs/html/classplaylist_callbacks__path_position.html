@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('classplaylist_callbacks__path_position
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write or read the pathPosition characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write or read the pathPosition characteristic.  
  <a href="classplaylist_callbacks__path_position.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for playlistCallbacks_pathPosition:</div>
@@ -112,7 +112,7 @@ Inheritance diagram for playlistCallbacks_pathPosition:</div>
   <img src="classplaylist_callbacks__path_position.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write or read the pathPosition characteristic. </p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write or read the pathPosition characteristic. </p>
 <p>Sandsara always are playing a playlist and every path has an index starting at 1, you can change the current path by its index in the playlist.</p>
 <p><b>Properties:</b></p>
 <ul>
@@ -121,22 +121,22 @@ Inheritance diagram for playlistCallbacks_pathPosition:</div>
 </ul>
 <p><b>UUID: 9b12a62e-2c6e-11eb-adc1-0242ac120002</b></p>
 <p><b>Usage:</b></p>
-<p>you can change the current path just writing to this characteristic the index of the desied path, or in the same way you can read it to know current path index.</p>
+<p>you can change the current path just by writing to this characteristic the index of the desired path, or in the same way, you can read it to know the current path index.</p>
 <p><b>Range:</b></p>
-<p>accepted values goes from 1 to the number of paths in the current playlist.</p>
+<p>accepted values go from 1 to the number of paths in the current playlist.</p>
 <p><b>Responses:</b></p>
 <ul>
 <li>"ok" means the path was changed successfully.</li>
 </ul>
-<p>this is the behavior whe you change a path using this characteristic.</p><ol type="1">
-<li>sandsara is playing the Geometries playlist and it is playing the 15 postion track.</li>
-<li>you change to third position path using this characteristic.</li>
+<p>this is the behavior when you change a path using this characteristic.</p><ol type="1">
+<li>sandsara is playing the Geometries playlist and it is playing the 15 position track.</li>
+<li>you change to the third position path using this characteristic.</li>
 <li>sandara will play the third position path.</li>
-<li>when it finish, sandsara will continue with the fourth index path.</li>
+<li>when it finishes, sandsara will continue with the fourth index path.</li>
 </ol>
-<dl class="section note"><dt>Note</dt><dd>when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteritic for a response. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteristic for a response. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>make sure to change to a valid index </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>How to send a file? --&gt; <a class="el" href="class_files_callbacks__receive.html" title="[BLE Command] This class is used to create and object to be called when you write the FileReceive cha...">FilesCallbacks_receive</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>How to send a file? --&gt; <a class="el" href="class_files_callbacks__receive.html" title="[BLE Command] This class is used to create an object to be called when you write the FileReceive char...">FilesCallbacks_receive</a>, <a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>

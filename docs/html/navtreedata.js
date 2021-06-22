@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Sandsara", "index.html", [
+    [ "BLE Communication", "_b_l_e_communication.html", null ],
     [ "Sandsara", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -50,9 +51,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_bluetooth_8cpp.html",
-"_working_area_8cpp.html#a7d07433ea299371bb3a8835653d21ce8",
-"functions.html"
+"_b_l_e_communication.html",
+"_working_area_8cpp.html#a7c4f8ef6e92577b13ae2c8ffed26ac3d",
+"files.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

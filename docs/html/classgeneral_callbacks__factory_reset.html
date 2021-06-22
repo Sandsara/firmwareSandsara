@@ -102,13 +102,35 @@ $(document).ready(function(){initNavTree('classgeneral_callbacks__factory_reset.
 <div class="title">generalCallbacks_factoryReset Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalFactoryReset characteristic.  
+ <a href="classgeneral_callbacks__factory_reset.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for generalCallbacks_factoryReset:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classgeneral_callbacks__factory_reset.png" alt=""/>
  </div></div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the generalFactoryReset characteristic. </p>
+<p>Sandara has default values for every parameter like ball speed, ledspeed, name, etc and you can set these values with this characteristic.</p>
+<p><b>Properties:</b></p>
+<ul>
+<li>Write</li>
+</ul>
+<p><b>UUID: 7b204bce-30c3-11eb-adc1-0242ac120002</b></p>
+<p><b>Usage:</b></p>
+<p>if you want to make a factory reset to Sandsara just write to this characteristic any character.</p>
+<p><b>Range:</b></p>
+<p>any character.</p>
+<p><b>Response:</b></p>
+<p>you can receive one of these responses after you write to this characteristic.</p><ul>
+<li>"ok" sandsara has reset its values as default.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>all the reponses has to be read from the generalErrorMsg characteristic after being notified by it. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>all the parameters of sandara will be set as default if you use this characteristic moreover the sensors hall will be calibrated again. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>
 </div><!-- contents -->

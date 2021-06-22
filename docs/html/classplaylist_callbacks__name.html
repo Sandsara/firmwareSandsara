@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('classplaylist_callbacks__name.html',''
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write or read the playlistName characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write or read the playlistName characteristic.  
  <a href="classplaylist_callbacks__name.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for playlistCallbacks_name:</div>
@@ -112,15 +112,15 @@ Inheritance diagram for playlistCallbacks_name:</div>
   <img src="classplaylist_callbacks__name.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write or read the playlistName characteristic. </p>
-<p>Sandsara is always playing back a playlist that contains a certain paths. This characteristic is used to know or change the current playlist. all the playlist are store in a text file but with .playlist extension and this contains the file name of the path to be reproduced. For example, a generic playlist file will looks like this: </p><div class="fragment"><div class="line">path1.txt</div><div class="line">path2.txt</div><div class="line">path3.txt</div><div class="line">path4.txt</div></div><!-- fragment --><p><b>Properties:</b></p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write or read the playlistName characteristic. </p>
+<p>Sandsara is always playing back a playlist that contains certain paths. This characteristic is used to know or change the current playlist. all the playlists are store in a text file but with .playlist extension and this contains the file name of the path to be reproduced. For example, a generic playlist file will looks like this: </p><div class="fragment"><div class="line">path1.txt</div><div class="line">path2.txt</div><div class="line">path3.txt</div><div class="line">path4.txt</div></div><!-- fragment --><p><b>Properties:</b></p>
 <ul>
 <li>Write</li>
 <li>Read</li>
 </ul>
 <p><b>UUID: 9b12a048-2c6e-11eb-adc1-0242ac120002</b></p>
 <p><b>Usage:</b></p>
-<p>you can write to this characteristic to change to a playlist, or in the same way you can read it to know the current playlist. To change a playlist just write to the this characteristic the name of the playlist you want to playback (ignoring its extension, for example, if you want to change to “geometry.playlist” just write “geometry”). Be sure you have sent the playlist to Sandsara before or make sure it already exists in the SD card.</p>
+<p>you can write to this characteristic to change to a playlist, or in the same way you can read it to know the current playlist. To change a playlist just write to this characteristic the name of the playlist you want to playback (ignoring its extension, for example, if you want to change to “geometry.playlist” just write “geometry”). Be sure you have sent the playlist to Sandsara before or make sure it already exists on the SD card.</p>
 <p><b>Range:</b></p>
 <p>accepted values are 0 or any other diffeent than 0.</p><ul>
 <li>1 for clockwise direction.</li>
@@ -131,8 +131,8 @@ Inheritance diagram for playlistCallbacks_name:</div>
 <li>"ok" means the playlist was changed successfully.</li>
 <li>"-1" means the playlist you try to change does not exist.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteritic for a response.</dd></dl>
-<dl class="section see"><dt>See also</dt><dd>How to send a file? --&gt; <a class="el" href="class_files_callbacks__receive.html" title="[BLE Command] This class is used to create and object to be called when you write the FileReceive cha...">FilesCallbacks_receive</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteristic for a response.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd>How to send a file? --&gt; <a class="el" href="class_files_callbacks__receive.html" title="[BLE Command] This class is used to create an object to be called when you write the FileReceive char...">FilesCallbacks_receive</a>, <a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>

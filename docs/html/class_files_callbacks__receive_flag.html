@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('class_files_callbacks__receive_flag.ht
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write the receiveFlag characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write the receiveFlag characteristic.  
  <a href="class_files_callbacks__receive_flag.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FilesCallbacks_receiveFlag:</div>
@@ -112,7 +112,7 @@ Inheritance diagram for FilesCallbacks_receiveFlag:</div>
   <img src="class_files_callbacks__receive_flag.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write the receiveFlag characteristic. </p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write the receiveFlag characteristic. </p>
 <p>receiveFlag characteristic is used to start the transfer of a file from the BLE client to this ESP32.</p>
 <p><b>Properties:</b></p>
 <ul>
@@ -121,22 +121,23 @@ Inheritance diagram for FilesCallbacks_receiveFlag:</div>
 <p><b>UUID: fcbff68e-2af1-11eb-adc1-0242ac120002</b></p>
 <p><b>Usage:</b></p>
 <p>in order to transfer a file to this device you need to follow the next steps:</p><ol type="1">
-<li>Activate notifications of the <a class="el" href="class_files_callbacks__send.html" title="[BLE Command] This class is used to create and object to be called when you write the sendFlag charac...">FilesCallbacks_send</a> characteristic asociated to this class.</li>
-<li>write to this characteristic the name of file you want to transfer.</li>
+<li>Activate notifications of the <a class="el" href="class_files_callbacks__send.html" title="[BLE Command] This class is used to create and object to be called when you write the sendFlag charac...">FilesCallbacks_send</a> characteristic associated with this class.</li>
+<li>write to this characteristic the name of the file you want to transfer.</li>
 <li>write to the <a class="el" href="class_files_callbacks__send.html" title="[BLE Command] This class is used to create and object to be called when you write the sendFlag charac...">FilesCallbacks_send</a> the bytes of the file in chunks of 512 bytes.</li>
 <li>wait to be notified from theFilesCallbacks_send.</li>
 <li>repeat steps 3 and 4 until you have sent all the bytes of the file</li>
 <li>write to this characteristic any message to finish the transfer</li>
-<li>you will be notify by FileErrorMsg characteristic with "done"</li>
+<li>you will be notified by FileErrorMsg characteristic with "done"</li>
 </ol>
 <p><b>Range:</b></p>
-<p>accepted values are a name, for example, "New Path.thr" to start the transmition of a file and any other character to finish it.</p>
-<dl class="section note"><dt>Note</dt><dd>you may will be notified by fileErrorMsg characteristic with some of this massage:<ul>
+<p>accepted values are a name, for example, "New Path.thr" to start the transmission of a file and any other character to finish it.</p>
+<dl class="section note"><dt>Note</dt><dd>you may be notified by fileErrorMsg characteristic with some of this massage:<ul>
 <li>"ok" means the file was created and is waiting for the bytes of the file.</li>
 <li>"error= -2" means the file couldn't be created maybe because there is no sd card inserted. </li>
 </ul>
 </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>if you try to send a file named equals than other inside the sd card it will be deleted to accept this new file, so if you're not sure if the name of your file name already exists in the sd card, Use the <a class="el" href="class_files_callbacks__check_file.html" title="[BLE Command] This class is used to create and object to be called when you write to the checkFile ch...">FilesCallbacks_checkFile</a> characteristic. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>if you try to send a file named equals than other inside the sd card it will be deleted to accept this new file, so if you're not sure if the name of your file name already exists in the sd card, Use the <a class="el" href="class_files_callbacks__check_file.html" title="[BLE Command] This class is used to create an object to be called when you write to the checkFile cha...">FilesCallbacks_checkFile</a> characteristic. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>

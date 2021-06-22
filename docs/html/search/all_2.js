@@ -2,6 +2,8 @@ var searchData=
 [
   ['b',['b',['../unionuwb.html#ac56b18528fe09746f23a8bb2bddae051',1,'uwb::b()'],['../_motors_8cpp.html#a9148c21e61b3deadffd215454f11b940',1,'b():&#160;Motors.cpp'],['../_working_area_8cpp.html#a12857102343f2f2a198414bdcc70e51b',1,'B():&#160;WorkingArea.cpp']]],
   ['bigpulleysize',['bigPulleySize',['../config_8h.html#a0ec1bbb16b091b56b9a60ecbac02c8b4',1,'bigPulleySize():&#160;Motors.cpp'],['../_motors_8cpp.html#a0ec1bbb16b091b56b9a60ecbac02c8b4',1,'bigPulleySize():&#160;Motors.cpp']]],
+  ['ble_20communication_2emd',['BLE communication.md',['../_b_l_e_01communication_8md.html',1,'']]],
+  ['ble_20communication',['BLE Communication',['../_b_l_e_communication.html',1,'']]],
   ['bleservercallback',['bleServerCallback',['../classble_server_callback.html',1,'']]],
   ['bluetooth',['Bluetooth',['../class_bluetooth.html',1,'Bluetooth'],['../class_bluetooth.html#adff22f9e5f2bd81b1fc5b8eeba71f68b',1,'Bluetooth::Bluetooth()']]],
   ['bluetooth_2ecpp',['Bluetooth.cpp',['../_bluetooth_8cpp.html',1,'']]],

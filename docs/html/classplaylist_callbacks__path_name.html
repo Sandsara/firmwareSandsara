@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('classplaylist_callbacks__path_name.htm
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write or read the pathName characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write or read the pathName characteristic.  
  <a href="classplaylist_callbacks__path_name.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for playlistCallbacks_pathName:</div>
@@ -112,8 +112,8 @@ Inheritance diagram for playlistCallbacks_pathName:</div>
   <img src="classplaylist_callbacks__path_name.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write or read the pathName characteristic. </p>
-<p>all the paths has and unique name and the sandsara tracks are name starting with "Sandsara-trackNumber-", for example, "Sandsara-trackNumber-0001.thr". you can change or know the current path with this characteristic.</p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write or read the pathName characteristic. </p>
+<p>all the paths have a unique name and the sandsara tracks are named starting with "Sandsara-trackNumber-", for example, "Sandsara-trackNumber-0001.thr". you can change or know the current path with this characteristic.</p>
 <p><b>Properties:</b></p>
 <ul>
 <li>Write</li>
@@ -121,7 +121,7 @@ Inheritance diagram for playlistCallbacks_pathName:</div>
 </ul>
 <p><b>UUID: 9b12a534-2c6e-11eb-adc1-0242ac120002</b></p>
 <p><b>Usage:</b></p>
-<p>you can write to this characteristic to change the current path, or in the same way you can read it to know it.</p>
+<p>you can write to this characteristic to change the current path, or in the same way, you can read it to know it.</p>
 <p><b>Range:</b></p>
 <p>accepted values are any name, for example "my track.thr", "path x.txt", etc.</p>
 <p>**responses: **</p>
@@ -129,15 +129,15 @@ Inheritance diagram for playlistCallbacks_pathName:</div>
 <li>"ok" means the path was changed successfully.</li>
 <li>"-1" means the playlist you try to change does not exist.</li>
 </ul>
-<p>this characteristic is used to "test" a path, this is the behavior whe you change a path using this characteristic.</p><ol type="1">
-<li>sandsara is playing the Geometries playlist and it is playing the 15 postion track.</li>
+<p>This characteristic is used to "test" a path, this is the behavior when you change a path using this characteristic.</p><ol type="1">
+<li>Sandsara is playing the Geometries playlist and it is playing the 15 position track.</li>
 <li>you change to "my track.txt" using this characteristic.</li>
 <li>sandara will play "my track.txt"</li>
-<li>when it finish, sandsara will go back to 15 positon track of the Geometries playlist.</li>
+<li>when it finishes, sandsara will go back to the 15 position track of the Geometries playlist.</li>
 </ol>
-<dl class="section note"><dt>Note</dt><dd>when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteritic for a response. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>we recomment to use <a class="el" href="classplaylist_callbacks__path_position.html" title="[BLE Command] This class is used to create and object to be called when you write or read the pathPos...">playlistCallbacks_pathPosition</a> to change a path. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd>How to send a file? --&gt; <a class="el" href="class_files_callbacks__receive.html" title="[BLE Command] This class is used to create and object to be called when you write the FileReceive cha...">FilesCallbacks_receive</a> </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>when you write to this characteristic you will be notified by the playlistCharacteristic_errorMsg characteristic for a response. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>we recommend using <a class="el" href="classplaylist_callbacks__path_position.html" title="[BLE Command] This class is used to create an object to be called when you write or read the pathPosi...">playlistCallbacks_pathPosition</a> to change a path. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>How to send a file? --&gt; <a class="el" href="class_files_callbacks__receive.html" title="[BLE Command] This class is used to create an object to be called when you write the FileReceive char...">FilesCallbacks_receive</a>, <a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>

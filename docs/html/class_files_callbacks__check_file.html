@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('class_files_callbacks__check_file.html
 </div><!--header-->
 <div class="contents">
 
-<p><b>[BLE Command]</b> This class is used to create and object to be called when you write to the checkFile characteristic.  
+<p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the checkFile characteristic.  
  <a href="class_files_callbacks__check_file.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for FilesCallbacks_checkFile:</div>
@@ -112,7 +112,7 @@ Inheritance diagram for FilesCallbacks_checkFile:</div>
   <img src="class_files_callbacks__check_file.png" alt=""/>
  </div></div>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>[BLE Command]</b> This class is used to create and object to be called when you write to the checkFile characteristic. </p>
+<div class="textblock"><p><b>[BLE Command]</b> This class is used to create an object to be called when you write to the checkFile characteristic. </p>
 <p>checkFile characteristic is used to check if a file exists in the sd card.</p>
 <p><b>Properties:</b></p>
 <ul>
@@ -120,16 +120,17 @@ Inheritance diagram for FilesCallbacks_checkFile:</div>
 </ul>
 <p><b>UUID: fcbffb52-2af1-11eb-adc1-0242ac120002</b></p>
 <p><b>Usage:</b></p>
-<p>if you want to check if a file exists in the SD card just write to this characteritic the file name you want to check and wait to be notified by fileErroMsg (fcbffce2-2af1-11eb-adc1-0242ac120002). to know if the file exists read fileErroMsg characteristic and if the response is 1 the file exists and if it is 0 file doesn’t exist.</p>
+<p>if you want to check if a file exists in the SD card just write to this characteristic the file name you want to check and wait to be notified by fileErroMsg (fcbffce2-2af1-11eb-adc1-0242ac120002). to know if the file exists read fileErroMsg characteristic and if the response is 1 the file exists and if it is 0 file doesn’t exist.</p>
 <p><b>Range:</b></p>
 <p>accepted values are a name, for example, "Old Path.txt", "dogs.txt", "geometries.playlist" and so on.</p>
-<p>**Response: **</p>
+<p><b>Response:</b></p>
 <p>you can receive one of these responses after you write to this characteristic.</p><ul>
-<li>"0" means the file does NOT exists</li>
+<li>"0" means the file does NOT exist</li>
 <li>"1" means the file exists*.</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>all the reponses has to be read from the fileErroMsg characteristic after being notified by it. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>* if the file name starts with "Sandsara-trackNumber-" you will receive "1" even if your exact file name does not exists in the sd card but it exists with another extension, for example, if in the sd card exists the file called "Sandsara-trackNumber-011.txt" and you ask for "Sandsara-trackNumber-011.bin" you will receive "1" as a response even if "Sandsara-trackNumber-011.bin" does no exists, but "Sandsara-trackNumber-011.txt" does. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>all the responses have to be read from the fileErroMsg characteristic after being notified by it. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>* if the file name starts with "Sandsara-trackNumber-" you will receive "1" even if your exact filename Does not exist in the sd card but it exists with another extension, for example, if in the sd card exists the file called "Sandsara-trackNumber-011.txt" and you ask for "Sandsara-trackNumber-011.bin" you will receive "1" as a response even if "Sandsara-trackNumber-011.bin" does no exists, but "Sandsara-trackNumber-011.txt" does. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="_b_l_e_communication.html">How to read the response of a characteristic</a> </dd></dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="_bluetooth_8cpp.html">Bluetooth.cpp</a></li>
 </ul>
