@@ -25,7 +25,7 @@ var NAVTREE =
 [
   [ "Sandsara", "index.html", [
     [ "BLE Communication", "_b_l_e_communication.html", null ],
-    [ "Sandsara", "md__r_e_a_d_m_e.html", null ],
+    [ "Sandsara", "md_firmware_sandsara__r_e_a_d_m_e.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -53,7 +53,7 @@ var NAVTREEINDEX =
 [
 "_b_l_e_communication.html",
 "_working_area_8cpp.html#a7c4f8ef6e92577b13ae2c8ffed26ac3d",
-"files.html"
+"dir_f82768eb38b81461705decc7ae5a77f4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

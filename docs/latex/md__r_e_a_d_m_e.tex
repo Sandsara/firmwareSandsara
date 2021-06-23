@@ -1,0 +1,48 @@
+Sandsara Firmware \hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Features version 1.\+0.\+0}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item 25 comandos para la comunicacion con Sandsara por medio de \mbox{\hyperlink{class_bluetooth}{Bluetooth}}.
+\item Interpolacion de puntos para archivos con extension T\+HR.
+\item Control de los L\+ED\textquotesingle{}s R\+GB.
+\item 16 paletas de colres precargadas para los leds.
+\item Lectura de archivos .T\+XT, .B\+IN y .T\+HR desde la memoria SD.
+\item Secuencia de calibracion de los motores para obtener su posicion inicial.
+\item Calculo de la cinematica directa e inversa de Sandsara.
+\item 4 modos de orden de reproduccion de los archivos
+\begin{DoxyItemize}
+\item Orden desendente de los paths en la lista de reproduccion.
+\item Orden random de los paths de la lista de reproduccion.
+\item Orden fijo de todos los paths contenidos en la memoria SD.
+\item Orden random de todos los paths contenidos en la memoria SD.
+\end{DoxyItemize}
+\item Interpolacion lineal entre puntos separados a mas de 1 mm.
+\item Restricciones del area de trabajo para Hallo y Stelle.
+\item mezcla de colores en el espacio de rgb$^\wedge$2 para las paletas de colores.
+\item Thread para el control de los motores.
+\item Thread para el control de los leds.
+\item Thread para el manejo de los comandos por bluetooth.
+\item Guardado de datos importantes en la E\+E\+P\+R\+OM(lista de reproduccion, orden de reproduccion, paleta de colores, velocidad de la esfera, velocidad de los leds, etc.)
+\item Funcion de testeo para verificar el correcto funcionamiento de todos los componentes.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{proximas caracteristicas}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item aceleracion y desaceleracion para evitar los movimientos bruscos de los motores que se presentan en ciertos paths.
+\item aumentar la corriente de los motores a 600mA en la calibracion.
+\end{DoxyItemize}
+
+Se esta trabajando en la generacion de la documentacion del código.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Compilacion del proyecto}\label{md__r_e_a_d_m_e_autotoc_md3}
+Para una rapida y facil compilacion del proyecto nosotros recomendamos utilizar platform\+IO y Visual Studio Code, en el archivo platformio.\+ini se encuentran las librerias que necesarias para compilar el proyecto. Para descargar y compilar el proyecto recomendamos los siguientes pasos.
+\begin{DoxyEnumerate}
+\item Descargar Visual Studio Code.
+\item Instalar el complemento de Platform\+IO.
+\item Clonar el repositorio en una nueva carpeta.
+\item Abrir la carpeta, donde se clono el proyecto, desde Visual Studio Code.
+\item Seguir los pasos del apartado de Consideraciones.
+\item Presionar el Boton de \char`\"{}platform\+I\+O\+: Build\char`\"{}.
+\item Listo.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{Consideraciones}\label{md__r_e_a_d_m_e_autotoc_md4}
+Es importante moficar las siguientes librerias antes de compilar el proyecto.
+
+El archivo Hardware\+Serial.\+cpp modificar las siguientes lineas linea 10\+: \#define R\+X1 9 cambiar por \#define R\+X1 26 linea 14\+: \#define T\+X1 10 cambiar por \#define T\+X1 27
+
+En el archivo Bluetooth\+Serial.\+cpp modificar las siguientes lineas para aumentar el buffer del bluetooth. Linea 45\+: \#define R\+X\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE 512 cambiar por \#define R\+X\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE 30100 Linea 46\+: \#define T\+X\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE 32 cambiar por \#define T\+X\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+S\+I\+ZE 1024 

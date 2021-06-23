@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sandsara',['Sandsara',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['sandsara',['Sandsara',['../md_firmware_sandsara__r_e_a_d_m_e.html',1,'']]],
   ['safe_5fspeed',['SAFE_SPEED',['../config_8h.html#a92862453ec70e8842ed8eabbe3b877a0',1,'config.h']]],
   ['samples',['SAMPLES',['../config_8h.html#ad0c329adebc27917fc0a4f51079acf6a',1,'config.h']]],
   ['sandsara',['Sandsara',['../_bluetooth_8cpp.html#a8ca7489c813cfaab7d9aa5d00791a69f',1,'Sandsara():&#160;main.cpp'],['../main_8cpp.html#a8ca7489c813cfaab7d9aa5d00791a69f',1,'Sandsara():&#160;main.cpp']]],
