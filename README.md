@@ -1,5 +1,6 @@
 # Sandsara
-Sandsara Firmware
+Sandsara Firmware. You can read the live documentation [here](https://codedocs.xyz/Sandsara/firmwareSandsara/index.html)  
+
 ## Features version 1.0.0
 - Commands for Bluetooth communication. 
 - Interpolation for THR file is implemented.

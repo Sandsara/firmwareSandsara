@@ -1738,26 +1738,28 @@ class generalCallbacks_Sleep : public BLECharacteristicCallbacks
 };
 
 /**
- * @brief **[BLE Command]** This class is used to create an object to be called when you write to the generalSleep characteristic.
+ * @brief **[BLE Command]** This class is used to create an object to be called when you write to the generalSpeed characteristic.
  * 
- * Sandsara has 3 movement modes, play, pause, and sleep modes. You can enter Sleep mode using this characteristic.
- * Sleep mode means that Sandsara will stop and go to the center or edge position and turn off the led strip.
- * this means that the current path will be rewind and when you resume sandsara the path will start from the beginning.  
+ * the sphere speed can be changed with this characteristic. the sphere tries to move in a constant speed most of the time, the speed can goes down or up
+ * because we implement an algorithm to accelerate or decelerate to prevent abrupt motor movements and the Scara mechanism also tends to move slower in the center.
  * 
  * **Properties:**  
  * - Write
+ * - Read
  * 
- * **UUID: 7b204a3e-30c3-11eb-adc1-0242ac120002**
+ * **UUID: 7b204b10-30c3-11eb-adc1-0242ac120002**
  * 
  * **Usage:**  
- * if you want to enter Sandsara in sleep mode just write to this characteristic any character.
+ * if you want to change the speed of sandsara you can choose you're desired speed between 10 posible values just writing to this characteristic a number
+ * between 1 and 10 where 1 is the slowest speed and 10 the highest.
  * 
  * **Range:**  
- * whatever character will be understood as if you want to sleep Sandsara.
+ * accepted values goes from 1 to 10.
  * 
  * **Response:**  
  * you can receive one of these responses after you write to this characteristic.
- * - "ok" means Sandsara is in sleep mode.
+ * - "ok" the desired speed was set.
+ * - "error= -2" the speed is out of range.
  * 
  * @note all the responses have to be read from the generalErrorMsg characteristic after being notified by it.
  * @see how to know the status of sandsara? --> generalCallbacks_status.
