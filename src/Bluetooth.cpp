@@ -814,6 +814,9 @@ class playlistCallbacks_name : public BLECharacteristicCallbacks
             Serial.print("WRITE playlist: ");
             Serial.println(playListGlobal);
         #endif
+        if (!playListGlobal.equals(DEFAULTPLAYLIST)) {
+            sdRemove(DEFAULTPLAYLIST);
+        }
         playlistCharacteristic_errorMsg->setValue("ok");
         playlistCharacteristic_errorMsg->notify();
     } //onWrite 
