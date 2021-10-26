@@ -161,11 +161,12 @@ void    goEdgeSpiral(bool);
 void    spiralGoTo(float , float );
 
 void moveSteps(void* );
+void goPolar(double module, double angle);
 
 //====
 //====Led Variables====
 #define LED_PIN     32
-int     NUM_LEDS;
+    int NUM_LEDS;
 #define BRIGHTNESS  255
 #define LED_TYPE    WS2812B
 #define COLOR_ORDER GRB
@@ -444,6 +445,10 @@ void setup()
     if (!playListGlobal.equals(TESTINGPLAYLIST)){
         Serial.println("iniciara espiral");
         goEdgeSpiral(false);
+        Sandsara.setSpeed(SPEED_TO_CENTER);
+        delay(1000);
+        goPolar(SdFiles::DISTANCIA_MAX, 2*PI);
+        Sandsara.setSpeed(romGetSpeedMotor());
         Serial.println("termino espiral");
     }
     delay(1000);
@@ -981,6 +986,17 @@ void spiralGoTo(float module, float angle){
 
     movePolarTo(module, angle, 0, true);
     lastPoint = false;
+}
+
+void goPolar(double module, double angle){
+    Sandsara.setZCurrent(Sandsara.getCurrentModule());
+    Sandsara.setThetaCurrent(Sandsara.getCurrentAngle());
+    
+    lastPoint = true;
+    movePolarTo(module, Sandsara.getCurrentAngle()  + angle, 0, true);
+    lastPoint = false;
+
+    Sandsara.completePath();
 }
 
 //=========================================================
