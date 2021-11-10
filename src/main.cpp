@@ -88,6 +88,7 @@ bool    speedChangedMain = false;
 String  changedProgram;
 int     changedPosition;
 bool    lastPoint = false;
+int     tracksPlayed = 0;
 //====
 //====Pallete Color Variables====
 CRGBPalette16   NO_SD_PALLETE;
@@ -900,6 +901,12 @@ int runFile(String fileName){
     //====
     Sandsara.completePath();
     //====
+
+    // adding 1 to the counter of played tracks
+    tracksPlayed += 1;
+    Serial.print("tracks played: ");
+    Serial.println(tracksPlayed);
+
     posisionCase = Sandsara.position();
     if (posisionCase == 2){
         movePolarTo(SdFiles::DISTANCIA_MAX, 0, 0, true);
@@ -913,17 +920,24 @@ int runFile(String fileName){
         movePolarTo(0, 0, 0, true);
         // lastPoint = false;
         Sandsara.completePath();
-		if (intermediateCalibration == true)
+		if (intermediateCalibration == true || tracksPlayed >= TRACKS_BEFORE_CALIBRATION)
 		{
             #ifdef DEBUGGING_DATA
                 Serial.println("se realizara la calibracion intermedia");
             #endif
+
+            Serial.println("calibration starts");
 			haloCalib.verificacion_cal();
+            Serial.println("calibration ends");
+
+            tracksPlayed = 0;
 		}
 	}
     #ifdef PROCESSING_SIMULATOR
         Serial.println("finished");
     #endif
+
+
     delay(1000);
     return 10;
 }

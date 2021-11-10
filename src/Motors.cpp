@@ -692,8 +692,8 @@ void Motors::ik(double x, double y, double *q1, double *q2)
     ///calculus of theta
     theta = thetaPolar(x, y);
     ///if x,y is out of range, z will be the maximun radius possible
-    if (z > l1 + l2)
-        z = l1 + l2;
+    if (z > MAX_RADIO)
+        z = MAX_RADIO;
     ///Delimiter module z
     if (productType){
         i = theta / (2 * PI / (2 * no_picos));

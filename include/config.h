@@ -7,7 +7,7 @@
  */
 #define v1Current 1
 #define v2Current 0
-#define v3Current 1
+#define v3Current 2
 
 extern char dataS[];
 
@@ -78,6 +78,9 @@ extern double littlePulleySize;
 #define DIR_PIN2 4
 #define STEP_PIN2 21
 #define EN_PIN2 15
+
+// number of tracks to be played before the calibration is performed
+#define TRACKS_BEFORE_CALIBRATION 12
 
 //no_picos representa el numero de picos de Stelle
 #define no_picos 6
