@@ -443,6 +443,7 @@ void setup()
                     &motorsTask,
                     0);
     delay(500); 
+
     if (!playListGlobal.equals(TESTINGPLAYLIST)){
         Serial.println("iniciara espiral");
         goEdgeSpiral(false);
