@@ -7,7 +7,7 @@
  */
 #define v1Current 1
 #define v2Current 0
-#define v3Current 3
+#define v3Current 4
 
 extern char dataS[];
 

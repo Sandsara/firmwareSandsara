@@ -46,8 +46,8 @@ Motors::Motors()
     Serial.println(microstepping);
     stepper1 = AccelStepper(1, STEP_PIN, DIR_PIN);
     stepper2 = AccelStepper(1, STEP_PIN2, DIR_PIN2);
-    // stepper1.setPinsInverted(true);
-    // stepper2.setPinsInverted(true);
+    stepper1.setPinsInverted(true);
+    stepper2.setPinsInverted(true);
     lastPoint = false;
 }
 
