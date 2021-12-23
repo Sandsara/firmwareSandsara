@@ -453,6 +453,10 @@ void setup()
         Sandsara.setSpeed(romGetSpeedMotor());
         Serial.println("termino espiral");
     }
+    
+    Serial.print("Firmware Version: ");
+    Serial.println(String(v1Current) + "." + String(v2Current) + "." + String(v3Current));
+
     delay(1000);
     firstExecution = true;
 }

@@ -108,7 +108,7 @@ void Testing::Test()
                     5,           /* priority of the task */
                     &Task3,      /* Task handle to keep track of created task */
                     0);          /* pin task to core 0 */                  
-    delay(500);	
+    //delay(500);	
 
 	pinMode(DIAG_PIN, INPUT);
 	pinMode(EN_PIN, OUTPUT);
@@ -203,24 +203,24 @@ void Testing::Test()
 		//===============Sensor_Hall==================
 		int dato_hall1 = 0;
 		int dato_hall2 = 0;
-
+                Serial.print("%%%%%,");
 		dato_hall1 = analogRead(hall1);
 		dato_hall2 = analogRead(hall2);
 		if (dato_hall1 > 1500 && dato_hall1 < 2200)
 		{
-			Serial.print("Hall1_OK,");
+			Serial.print("hall1_1,");
 		}
 		else
 		{
-			Serial.print("Hall1_Fail,");
+			Serial.print("hall1_0,");
 		}
 		if (dato_hall2 > 1500 && dato_hall2 < 2200)
 		{
-			Serial.print("Hall2_OK,");
+			Serial.print("hall2_1,");
 		}
 		else
 		{
-			Serial.print("Hall2_Fail,");
+			Serial.print("hall2_0,");
 		}
 
 		//===============Info Motors===================
@@ -267,11 +267,11 @@ void Testing::Test()
 		delay(100);
 		if(cont_m2 == 3)
 		{
-			Serial.print("CM2_OK,");
+			Serial.print("cm2_1,");
 		}
 		else
 		{
-			Serial.print("CM2_Fail,");
+			Serial.print("cm2_0,");
 		}
 		
 		//Microsteps m2
@@ -303,11 +303,11 @@ void Testing::Test()
 		delay(100);
 		if(cont_m2 == 3)
 		{
-			Serial.print("SM2_OK,");
+			Serial.print("sm2_1,");
 		}
 		else
 		{
-			Serial.print("SM2_Fail,");
+			Serial.print("sm2_0,");
 		}
 		
 		//===============Motor1==================
@@ -345,11 +345,11 @@ void Testing::Test()
 		delay(100);
 		if(cont_m1 == 3)
 		{
-			Serial.print("CM1_OK,");
+			Serial.print("cm1_1,");
 		}
 		else
 		{
-			Serial.print("CM1_Fail,");
+			Serial.print("cm1_0,");
 		}
 		
 		//MicroSteps m1
@@ -383,18 +383,19 @@ void Testing::Test()
 		delay(100);
 		if(cont_m1 == 3)
 		{
-			Serial.print("SM1_OK,");
+			Serial.print("sm1_1,");
 		}
 		else
 		{
-			Serial.print("SM1_Fail,");
+			Serial.print("sm1_0,");
 		}
 		
-
+                Serial.println("@@@@@");
 		//====SD====
 		t1 = millis();
 		t0 = t1;
 		band_sd = 0;
+		/*
 		while (!SD.begin(SD_CS_PIN, SPI_SPEED_TO_SD))
 		{
 			
@@ -407,6 +408,9 @@ void Testing::Test()
 				
 			}
 		}
+		*/
+		
+		/*
 		if(!SD.begin(SD_CS_PIN, SPI_SPEED_TO_SD))
 		{
 			Serial.println("Card_Fail");
@@ -418,9 +422,11 @@ void Testing::Test()
 			band_sd = 1;
 			
 		}
+		*/
         
 		while(true)
 		{
+			/*
 			if(band_sd == 0)
 			{
 				SD.begin(SD_CS_PIN, SPI_SPEED_TO_SD);
@@ -444,6 +450,9 @@ void Testing::Test()
 					break;
 				}
 			}
+			*/ 
+	 	        mover(1, 1, 500);
+			mover(1, 2, 500); 
 		}
 	}
 	
@@ -454,13 +463,13 @@ void info_motor1()
 	uint8_t result_1 = tmcMotorA.test_connection();
 	if (result_1 == 0)
 	{
-		Serial.print(F("M1_OK,"));
+		Serial.print(F("m1_1,"));
 	}
 	else
 	{
 		
 
-		Serial.print(F("M1_Fail,"));
+		Serial.print(F("m1_0,"));
 	}
 }
 
@@ -469,11 +478,11 @@ void info_motor2()
 	uint8_t result_2 = tmcMotorB.test_connection();
 	if (result_2 == 0)
 	{
-		Serial.print(F("M2_OK,"));
+		Serial.print(F("m2_1,"));
 	}
 	else
 	{
-		Serial.print(F("M2_Fail,"));
+		Serial.print(F("m2_0,"));
 	}
 }
 
